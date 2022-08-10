@@ -239,7 +239,7 @@ section
     font-style: none;
     right: 0px;
     bottom: 0px;
-    width: 155px;
+    width: 150px;
     border: 1px solid black;
     display: inline-block;
     vertical-align: top;
@@ -249,7 +249,7 @@ section
 
 
 
-@media all and (max-width: 1280px)
+@media all and (max-width: 1024px)
 {
     #section2
     {
