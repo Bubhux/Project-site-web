@@ -1,33 +1,49 @@
+/* Définition des polices */
 @font-face {
-    /* Définition d'une nouvelle police Abhaya Libre */
     font-family: 'abhaya_libreregular';
     src: url('../static/fonts/AbhayaLibre-Regular-webfont.eot');
     src: url('../static/fonts/AbhayaLibre-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../static/fonts/AbhayaLibre-Regular-webfont.woff2') format('woff2'),
-        url('../static/fonts/AbhayaLibre-Regular-webfont.woff') format('woff'),
-        url('../static/fonts/AbhayaLibre-Regular-webfont.ttf') format('truetype'),
-        url('../static/fonts/AbhayaLibre-Regular-webfont.svg#abhaya_libreregular') format('svg');
+         url('../static/fonts/AbhayaLibre-Regular-webfont.woff2') format('woff2'),
+         url('../static/fonts/AbhayaLibre-Regular-webfont.woff') format('woff'),
+         url('../static/fonts/AbhayaLibre-Regular-webfont.ttf') format('truetype'),
+         url('../static/fonts/AbhayaLibre-Regular-webfont.svg#abhaya_libreregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
-    /* Définition d'une nouvelle police Abel */
     font-family: 'abel_regular';
     src: url('../static/fonts/abel_regular-webfont.eot');
     src: url('../static/fonts/abel_regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../static/fonts/abel_regular-webfont.woff2') format('woff2'),
-        url('../static/fonts/abel_regular-webfont.woff') format('woff'),
-        url('../static/fonts/abel_regular-webfont.ttf') format('truetype'),
-        url('../static/fonts/abel_regular-webfont.svg#abel_regular') format('svg');
+         url('../static/fonts/abel_regular-webfont.woff2') format('woff2'),
+         url('../static/fonts/abel_regular-webfont.woff') format('woff'),
+         url('../static/fonts/abel_regular-webfont.ttf') format('truetype'),
+         url('../static/fonts/abel_regular-webfont.svg#abel_regular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+main section {
+    flex: 3;
+    margin-right: 20px; /* Ajustez l'espace entre la section et l'aside si nécessaire */
+}
+
+main aside {
+    flex: 1.2;
+    background-color: #706b64;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    /*font-size: 0.9em;*/
 }
 
 /* Eléments principaux de la page */
-
 body {
     background: url('../static/img/fond_bleu_gris.png');
     font-family: 'Trebuchet MS', Arial, sans-serif;
@@ -54,7 +70,6 @@ nav a {
 }
 
 /* Header */
-
 header {
     background: url('../static/img/separateur_bleu_redi2.png') repeat-x bottom;
     display: flex;
@@ -70,7 +85,6 @@ header {
 
 #logo {
     display: flex;
-    flex-direction: row;
     align-items: baseline;
 }
 
@@ -89,12 +103,11 @@ header h1 {
 header h2 {
     font-family: 'abel_regular', serif;
     font-size: 1.1em;
-    margin-top: 0px;
+    margin-top: 0;
     font-weight: normal;
 }
 
 /* Navigation */
-
 nav ul {
     list-style-type: none;
     display: flex;
@@ -118,7 +131,6 @@ nav a:hover {
 
 @media all and (max-width: 1024px) {
     nav {
-        width: auto;
         text-align: left;
     }
 
@@ -139,9 +151,7 @@ nav a:hover {
     }
 }
 
-
 /* Bannière */
-
 #banniere_image {
     margin-top: 15px;
     height: 200px;
@@ -155,7 +165,7 @@ nav a:hover {
 #banniere_description {
     position: absolute;
     bottom: 0;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0 0 5px 5px;
     width: 99.5%;
     height: 33px;
     padding-top: 15px;
@@ -163,7 +173,6 @@ nav a:hover {
     background-color: rgba(24, 24, 24, 0.6);
     color: white;
     font-size: 0.8em;
-
 }
 
 .bouton_rouge {
@@ -176,7 +185,7 @@ nav a:hover {
     border-radius: 5px;
     font-size: 1.2em;
     text-align: center;
-    padding: 3px 8px 0px 8px;
+    padding: 3px 8px 0;
     color: white;
     text-decoration: none;
 }
@@ -191,15 +200,11 @@ nav a:hover {
     }
 }
 
-
 /* Corps */
-
 section {
-    display: flex;
+    /*display: flex;*/
     margin-bottom: 20px;
 }
-
-
 
 #section2 {
     position: fixed;
@@ -207,48 +212,37 @@ section {
     opacity: 0.5;
     background-size: cover;
     text-align: right;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    text-decoration: none;
     color: solid black;
-    font-style: none;
-    right: 0px;
-    bottom: 0px;
+    right: 0;
+    bottom: 0;
     width: 155px;
     border: 1px solid black;
     display: inline-block;
     vertical-align: top;
     margin-right: 5px;
-    padding-right: 10px
+    padding-right: 10px;
 }
-
-
 
 @media all and (max-width: 1280px) {
     #section2 {
-        position: fixed;
         margin-left: 100px;
         margin-bottom: 10px;
-        padding: 0px;
+        padding: 0;
         padding-right: 5px;
         padding-bottom: 15px;
-        display: inline-block;
-        vertical-align: top;
         width: 98%;
-        bottom: 0px;
+        bottom: 0;
         height: 50px;
-        border: 1px solid black;
         background: url('../static/img/fond_bleu_gris.png') center;
         opacity: 0.4;
         background-size: cover;
         text-align: right;
-        border-radius: 5px 5px 5px 5px;
+        border-radius: 5px;
     }
 
-    #section2 ul a:hover
-
-    /* Apparence au survol des liens */
-        {
+    #section2 ul a:hover {
         text-decoration: underline;
         color: red;
     }
@@ -258,7 +252,6 @@ section {
         font-weight: bold;
         filter: opacity(1);
     }
-
 }
 
 article,
@@ -281,7 +274,7 @@ p,
     font-size: 0.9em;
 }
 
-aside {
+/*aside {
     flex: 1.2;
     position: relative;
     background-color: #706b64;
@@ -290,12 +283,7 @@ aside {
     padding: 10px;
     color: white;
     font-size: 0.9em;
-    /*z-index: 1;*/
-}
-
-aside {
-    text-align: start;
-}
+}*/
 
 aside h1 {
     text-align: center;
@@ -345,35 +333,6 @@ aside img {
     }
 }
 
-
-/* Footer : le bas de la page*/
-
-footer {
-    display: flex;
-    background: url('../static/img/separateur_bleu_redi2.png') repeat-x top;
-    padding-top: 25px;
-}
-
-#scrollup
-
-/*Bouton retourner en haut*/
-    {
-    position: relative;
-    right: 500px;
-    bottom: 20px;
-    opacity: 0.5;
-}
-
-footer p,
-footer ul {
-    font-size: 0.8em;
-}
-
-footer h1 {
-    font-size: 1.1em;
-}
-
-
 #tweet {
     width: 28%;
 }
@@ -382,9 +341,9 @@ footer h1 {
     width: 35%;
 }
 
-#mes_amis {
+/*#mes_amis {
     width: 31%;
-}
+}µ:
 
 #mes_photos img {
     border: 1px solid #181818;
@@ -410,11 +369,6 @@ li {
     list-style-type: none;
 }
 
-footer li:before {
-    content: "→";
-    /* caractère UTF-8 */
-}
-
 #p1 {
     line-height: 0.1em;
 }
@@ -423,39 +377,14 @@ footer li:before {
     line-height: 0.1em;
 }
 
-a
-
-/* Liens par défaut (non survolés) */
-    {
+a {
     text-decoration: underline;
     color: #27292a;
 }
 
-a:hover
-
-/* Apparence au survol des liens */
-    {
+a:hover {
     text-decoration: underline;
     color: white;
-}
-
-div #listes_rôles {
-    display: inline-block;
-    width: 100px;
-    position: relative;
-    bottom: 2px;
-    padding-right: 15px;
-}
-
-div #rôles {
-    display: inline-block;
-    width: 100px;
-    padding: 2px 2px;
-}
-
-div #listes_rôles li:before {
-    content: "→";
-    /* caractère UTF-8 */
 }
 
 h1,
@@ -466,48 +395,20 @@ legend {
     text-shadow: 2px 2px 2px #3a3e42;
 }
 
-/*h3.sidebartitle-widget
-{
-    color: #f8d0ad;
-    padding: 50px 0 50px;
-    margin: -40px;
-    clear: both;
-    overflow-wrap: break-word;
-    text-align: center;
-    font-size: 20px;
-    font-weight: normal;
-    font-style: italic;
-    text-align: center;
-    background: url(images/bg_sidebartitle3.jpg) no-repeat;
-    z-index: 2
-    
+td {
+    border: 1px solid black;
+}
+
+/*table {
+    border-collapse: collapse;
 }*/
 
-td
-
-/* Toutes les cellules des tableaux... */
-    {
-    border: 1px solid black;
-    /* auront une bordure de 1px */
-}
-
-table {
-    border-collapse: collapse;
-    /* Les bordures du tableau seront collées (plus joli) */
-}
-
 td,
-th
-
-/* Mettre une bordure sur les td et les th */
-    {
+th {
     border: 1px solid #706b64;
 }
 
-caption
-
-/* Mettre le titre à gauche*/
-    {
+caption {
     text-align: left;
 }
 
@@ -518,4 +419,225 @@ th {
 
 .underline {
     text-decoration: underline;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 10px; /* Coins arrondis */
+    margin: 20px 0; /* Espacement externe */
+    /*border: 2px solid #007bff; /* Bordure bleue pour le fieldset */
+    border-radius: 10px; /* Coins arrondis */
+    /*padding: 20px; /* Espacement interne */
+    margin: 20px 0; /* Espacement externe */
+    /*background-color: #f9f9f9; /* Couleur de fond légère */
+}
+
+legend {
+    font-weight: bold;
+}
+
+textarea {
+    display: block; /* Assure que la textarea prend toute la largeur disponible */
+    margin-bottom: 10px; /* Ajoute un espace entre la textarea et le bouton */
+}
+
+input[type="submit"] {
+    display: block; /* Assure que le bouton est sur une nouvelle ligne */
+    margin-top: 10px; /* Ajoute un espace au-dessus du bouton */
+    padding: 10px 20px; /* Ajoute du padding au bouton pour le rendre plus large */
+    border: 1px solid #007bff; /* Définir une bordure */
+    background-color: #22558c;
+    color: #fff; /* Couleur du texte du bouton */
+    border-radius: 4px; /* Coins arrondis du bouton */
+    cursor: pointer; /* Change le curseur lorsque la souris est au-dessus du bouton */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Couleur de fond du bouton au survol */
+    border-color: #0056b3; /* Couleur de la bordure au survol */
+}
+
+legend {
+    font-weight: bold; /* Texte en gras */
+    padding: 0 10px; /* Espacement horizontal autour du texte */
+    border-radius: 10px; /* Coins arrondis pour le fond */
+}
+
+#listes_rôles {
+    margin-top: 20px; /* Espacement au-dessus de la liste */
+}
+
+#listes_rôles ul {
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0;
+    margin: 0;
+}
+
+#listes_rôles li {
+    display: table; /* Affiche chaque élément de la liste comme une ligne de tableau */
+    width: 100%; /* Assure que les éléments prennent toute la largeur disponible */
+}
+
+#listes_rôles a {
+    display: table-cell;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #0b0c0d;
+}
+
+#listes_rôles a:hover {
+    background-color: #f1f1f1; /* Couleur de fond au survol */
+    border-radius: 10px;
+}
+
+div #listes_rôles {
+    /*display: inline-block;*/
+    width: 100px;
+    position: relative;
+    bottom: 2px;
+    padding-right: 15px;
+}
+
+div #rôles {
+    /*display: inline-block;*/
+    /*width: 100px;*/
+    padding: 2px 2px;
+}
+
+div #listes_rôles li:before {
+    content: "→";
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Évite les doublons de bordures */
+    margin: 20px 0; /* Espacement autour du tableau */
+}
+
+caption {
+    /*font-size: 1.5em; /* Taille de la police du titre du tableau */
+    margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+th, td {
+    border: 1px solid #ccc; /* Bordure des cellules */
+    padding: 8px; /* Espacement interne des cellules */
+    /*text-align: left; /* Alignement du texte à gauche */
+}
+
+th {
+    /*background-color: #f2f2f2; /* Couleur de fond des en-têtes */
+    font-weight: bold; /* Texte en gras pour les en-têtes */
+}
+
+/*/*tr:nth-child(even) {
+    background-color: #f9f9f9;
+}*/
+
+/*tr:nth-child(odd) {
+    background-color: #fff;
+}*/
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: url('../static/img/separateur_bleu_redi2.png') repeat-x top;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    color: #fff; /* Assurez-vous que le texte est lisible */
+}
+
+footer h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#scrollup {
+    position: relative;
+    right: -350px;
+    bottom: 14px;
+    opacity: 0.5;
+    flex: 1;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+#scrollup img {
+    max-width: 40px;
+}
+
+#tweet {
+    flex: 2;
+    margin: 0 20px;
+}
+
+#tweet img {
+    max-width: 100px;
+    border-radius: 10px;
+}
+
+#mes_photos {
+    flex: 3;
+    margin: 0 20px;
+}
+
+#mes_photos img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+/*#mes_amis {
+    flex: 2;
+    margin: 0 20px;
+}*/
+
+#listes_amis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#listes_amis ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1 1 45%; /* Chaque liste prend environ 45% de la largeur disponible */
+}
+
+#listes_amis li {
+    margin-bottom: 10px;
+}
+
+footer li:before {
+    content: "→ ";
+    color: #fff; /* Assurez-vous que le symbole est visible */
+}
+
+footer ul {
+    padding: 0;
+    margin: 0;
 }
