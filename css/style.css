@@ -1,0 +1,521 @@
+@font-face {
+    /* Définition d'une nouvelle police Abhaya Libre */
+    font-family: 'abhaya_libreregular';
+    src: url('../static/fonts/AbhayaLibre-Regular-webfont.eot');
+    src: url('../static/fonts/AbhayaLibre-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/AbhayaLibre-Regular-webfont.woff2') format('woff2'),
+        url('../static/fonts/AbhayaLibre-Regular-webfont.woff') format('woff'),
+        url('../static/fonts/AbhayaLibre-Regular-webfont.ttf') format('truetype'),
+        url('../static/fonts/AbhayaLibre-Regular-webfont.svg#abhaya_libreregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    /* Définition d'une nouvelle police Abel */
+    font-family: 'abel_regular';
+    src: url('../static/fonts/abel_regular-webfont.eot');
+    src: url('../static/fonts/abel_regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../static/fonts/abel_regular-webfont.woff2') format('woff2'),
+        url('../static/fonts/abel_regular-webfont.woff') format('woff'),
+        url('../static/fonts/abel_regular-webfont.ttf') format('truetype'),
+        url('../static/fonts/abel_regular-webfont.svg#abel_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Eléments principaux de la page */
+
+body {
+    background: url('../static/img/fond_bleu_gris.png');
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #181818;
+}
+
+#bloc_page {
+    width: 900px;
+    margin: auto;
+}
+
+@media all and (max-width: 1024px) {
+    #bloc_page {
+        width: auto;
+    }
+}
+
+section h1,
+footer h1,
+nav a {
+    font-family: 'abel_regular', serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* Header */
+
+header {
+    background: url('../static/img/separateur_bleu_redi2.png') repeat-x bottom;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+#titre_principal {
+    display: flex;
+    flex-direction: column;
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#logo img {
+    width: 99px;
+    height: 100px;
+}
+
+header h1 {
+    font-family: 'abhaya_libreregular', serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+}
+
+header h2 {
+    font-family: 'abel_regular', serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+/* Navigation */
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    font-size: 1.3em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #9c9c9c;
+    border-bottom: 3px solid #9c9c9c;
+}
+
+@media all and (max-width: 1024px) {
+    nav {
+        width: auto;
+        text-align: left;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        padding-left: 4px;
+    }
+
+    nav a {
+        font-size: 1.1em;
+    }
+
+    nav a:hover {
+        border-bottom: 0;
+    }
+}
+
+
+/* Bannière */
+
+#banniere_image {
+    margin-top: 15px;
+    height: 200px;
+    border-radius: 5px;
+    background: url('../static/img/Banniere_league_of_legends_redimensionner.jpg') no-repeat;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 25px;
+}
+
+#banniere_description {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0px 0px 5px 5px;
+    width: 99.5%;
+    height: 33px;
+    padding-top: 15px;
+    padding-left: 4px;
+    background-color: rgba(24, 24, 24, 0.6);
+    color: white;
+    font-size: 0.8em;
+
+}
+
+.bouton_rouge {
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background: url('../static/img/fond_degraderouge.png') repeat-x;
+    border: 1px solid #760001;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 3px 8px 0px 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.bouton_rouge img {
+    border: 0;
+}
+
+@media all and (max-width: 1024px) {
+    #banniere_image {
+        display: none;
+    }
+}
+
+
+/* Corps */
+
+section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+
+
+#section2 {
+    position: fixed;
+    background: url('../static/img/fond_bleu_gris.png') center;
+    opacity: 0.5;
+    background-size: cover;
+    text-align: right;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-decoration: none;
+    color: solid black;
+    font-style: none;
+    right: 0px;
+    bottom: 0px;
+    width: 155px;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    padding-right: 10px
+}
+
+
+
+@media all and (max-width: 1280px) {
+    #section2 {
+        position: fixed;
+        margin-left: 100px;
+        margin-bottom: 10px;
+        padding: 0px;
+        padding-right: 5px;
+        padding-bottom: 15px;
+        display: inline-block;
+        vertical-align: top;
+        width: 98%;
+        bottom: 0px;
+        height: 50px;
+        border: 1px solid black;
+        background: url('../static/img/fond_bleu_gris.png') center;
+        opacity: 0.4;
+        background-size: cover;
+        text-align: right;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    #section2 ul a:hover
+
+    /* Apparence au survol des liens */
+        {
+        text-decoration: underline;
+        color: red;
+    }
+
+    ul {
+        font-size: 0.8em;
+        font-weight: bold;
+        filter: opacity(1);
+    }
+
+}
+
+article,
+aside {
+    text-align: start;
+}
+
+article {
+    margin-right: 20px;
+    flex: 3;
+}
+
+.ico_categorie {
+    vertical-align: middle;
+}
+
+article,
+p,
+#section2 {
+    font-size: 0.9em;
+}
+
+aside {
+    flex: 1.2;
+    position: relative;
+    background-color: #706b64;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 0.9em;
+    /*z-index: 1;*/
+}
+
+aside {
+    text-align: start;
+}
+
+aside h1 {
+    text-align: center;
+}
+
+#fleche_bulle {
+    position: absolute;
+    top: 200px;
+    left: -12px;
+}
+
+#photo_lulu {
+    text-align: center;
+}
+
+#photo_lulu img {
+    border: 1px solid #181818;
+}
+
+aside img {
+    margin-right: 5px;
+}
+
+@media all and (max-width: 1024px) {
+    section {
+        flex-direction: column;
+    }
+
+    article,
+    aside {
+        width: auto;
+        margin-bottom: 15px;
+    }
+
+    #fleche_bulle {
+        display: none;
+    }
+
+    #photo_lulu img {
+        width: 110px;
+        float: right;
+        margin-left: 15px;
+    }
+
+    aside p:last-child {
+        text-align: center;
+    }
+}
+
+
+/* Footer : le bas de la page*/
+
+footer {
+    display: flex;
+    background: url('../static/img/separateur_bleu_redi2.png') repeat-x top;
+    padding-top: 25px;
+}
+
+#scrollup
+
+/*Bouton retourner en haut*/
+    {
+    position: relative;
+    right: 500px;
+    bottom: 20px;
+    opacity: 0.5;
+}
+
+footer p,
+footer ul {
+    font-size: 0.8em;
+}
+
+footer h1 {
+    font-size: 1.1em;
+}
+
+
+#tweet {
+    width: 28%;
+}
+
+#mes_photos {
+    width: 35%;
+}
+
+#mes_amis {
+    width: 31%;
+}
+
+#mes_photos img {
+    border: 1px solid #181818;
+    margin-right: 2px;
+}
+
+#listes_amis {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+}
+
+#mes_amis ul {
+    padding-left: 2px;
+}
+
+#mes_amis a {
+    text-decoration: none;
+    color: #383737;
+}
+
+li {
+    list-style-type: none;
+}
+
+footer li:before {
+    content: "→";
+    /* caractère UTF-8 */
+}
+
+#p1 {
+    line-height: 0.1em;
+}
+
+#p2 {
+    line-height: 0.1em;
+}
+
+a
+
+/* Liens par défaut (non survolés) */
+    {
+    text-decoration: underline;
+    color: #27292a;
+}
+
+a:hover
+
+/* Apparence au survol des liens */
+    {
+    text-decoration: underline;
+    color: white;
+}
+
+div #listes_rôles {
+    display: inline-block;
+    width: 100px;
+    position: relative;
+    bottom: 2px;
+    padding-right: 15px;
+}
+
+div #rôles {
+    display: inline-block;
+    width: 100px;
+    padding: 2px 2px;
+}
+
+div #listes_rôles li:before {
+    content: "→";
+    /* caractère UTF-8 */
+}
+
+h1,
+h2,
+caption,
+span,
+legend {
+    text-shadow: 2px 2px 2px #3a3e42;
+}
+
+/*h3.sidebartitle-widget
+{
+    color: #f8d0ad;
+    padding: 50px 0 50px;
+    margin: -40px;
+    clear: both;
+    overflow-wrap: break-word;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    background: url(images/bg_sidebartitle3.jpg) no-repeat;
+    z-index: 2
+    
+}*/
+
+td
+
+/* Toutes les cellules des tableaux... */
+    {
+    border: 1px solid black;
+    /* auront une bordure de 1px */
+}
+
+table {
+    border-collapse: collapse;
+    /* Les bordures du tableau seront collées (plus joli) */
+}
+
+td,
+th
+
+/* Mettre une bordure sur les td et les th */
+    {
+    border: 1px solid #706b64;
+}
+
+caption
+
+/* Mettre le titre à gauche*/
+    {
+    text-align: left;
+}
+
+td,
+th {
+    font-size: 0.9em;
+}
+
+.underline {
+    text-decoration: underline;
+}
