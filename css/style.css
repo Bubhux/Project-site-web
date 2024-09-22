@@ -34,13 +34,17 @@ main section {
 }
 
 main aside {
-    flex: 1.2;
+    display: flex;
+    /* flex: 1.2; */
     background-color: #706b64;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;
     padding: 10px;
     color: white;
-    /*font-size: 0.9em;*/
+    /* font-size: 0.9em; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Eléments principaux de la page */
@@ -175,11 +179,15 @@ nav a:hover {
     font-size: 0.8em;
 }
 
+#banniere_description p {
+    margin: 10px;
+}
+
 .bouton_rouge {
     height: 20px;
     position: absolute;
     right: 5px;
-    bottom: 5px;
+    bottom: 10px;
     background: url('../static/img/fond_degraderouge.png') repeat-x;
     border: 1px solid #760001;
     border-radius: 5px;
@@ -223,6 +231,10 @@ section {
     vertical-align: top;
     margin-right: 5px;
     padding-right: 10px;
+}
+
+#section2 li {
+    list-style-type: none;
 }
 
 @media all and (max-width: 1280px) {
@@ -290,9 +302,10 @@ aside h1 {
 }
 
 #fleche_bulle {
-    position: absolute;
-    top: 200px;
-    left: -12px;
+    position: relative;
+    top: 100px;
+    /* left: 500px; */
+    right: 143px;
 }
 
 #photo_lulu {
@@ -333,17 +346,9 @@ aside img {
     }
 }
 
-#tweet {
-    width: 28%;
-}
-
-#mes_photos {
-    width: 35%;
-}
-
 /*#mes_amis {
     width: 31%;
-}µ:
+}
 
 #mes_photos img {
     border: 1px solid #181818;
@@ -402,6 +407,16 @@ td {
 /*table {
     border-collapse: collapse;
 }*/
+
+a {
+    text-decoration: underline;
+    color: #b6178e;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(18, 208, 135);
+}
 
 td,
 th {
@@ -473,17 +488,22 @@ legend {
     list-style: none; /* Supprime les puces de la liste */
     padding: 0;
     margin: 0;
+    display: flex;
+    /*flex-direction: column; /* Aligne les éléments verticalement */
+    /*align-items: center; /* Centre horizontalement */
 }
 
 #listes_rôles li {
-    display: table; /* Affiche chaque élément de la liste comme une ligne de tableau */
-    width: 100%; /* Assure que les éléments prennent toute la largeur disponible */
+    width: 100%;
+    text-align: center; /* Centre le texte à l'intérieur de chaque élément */
 }
 
 #listes_rôles a {
-    display: table-cell;
+    display: inline-block;
+    width: 100%; /* Prend toute la largeur disponible */
     padding: 5px;
-    text-align: center;
+    margin: 5px;
+    text-align: center; /* Centre le texte */
     text-decoration: none;
     color: #0b0c0d;
 }
@@ -492,6 +512,7 @@ legend {
     background-color: #f1f1f1; /* Couleur de fond au survol */
     border-radius: 10px;
 }
+
 
 div #listes_rôles {
     /*display: inline-block;*/
@@ -504,12 +525,12 @@ div #listes_rôles {
 div #rôles {
     /*display: inline-block;*/
     /*width: 100px;*/
-    padding: 2px 2px;
+    padding: 0px 0px;
 }
 
-div #listes_rôles li:before {
+/*div #listes_rôles li:before {
     content: "→";
-}
+}*/
 
 
 table {
@@ -546,12 +567,15 @@ th {
 footer {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     background: url('../static/img/separateur_bleu_redi2.png') repeat-x top;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
-    color: #fff; /* Assurez-vous que le texte est lisible */
+    /*color: #fff; /* Assurez-vous que le texte est lisible */
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: center;
 }
 
 footer h2 {
@@ -573,24 +597,10 @@ footer a:hover {
     text-decoration: underline;
 }
 
-#scrollup {
-    position: relative;
-    right: -350px;
-    bottom: 14px;
-    opacity: 0.5;
-    flex: 1;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-}
-
-#scrollup img {
-    max-width: 40px;
-}
-
+/* Section du tweet */
 #tweet {
-    flex: 2;
-    margin: 0 20px;
+    width: 100%; /* Occupe 45% de la largeur du footer */
+    margin: 20px;
 }
 
 #tweet img {
@@ -598,26 +608,21 @@ footer a:hover {
     border-radius: 10px;
 }
 
-#mes_photos {
-    flex: 3;
-    margin: 0 20px;
+/* Section de droite contenant amis et photos */
+#right-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 20px;
 }
 
-#mes_photos img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 5px;
+#mes_amis, #mes_photos {
+    margin-bottom: 5px;
 }
 
-/*#mes_amis {
-    flex: 2;
-    margin: 0 20px;
-}*/
-
+/* Liste d'amis */
 #listes_amis {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -630,6 +635,7 @@ footer a:hover {
 
 #listes_amis li {
     margin-bottom: 10px;
+    white-space: nowrap;
 }
 
 footer li:before {
@@ -637,7 +643,42 @@ footer li:before {
     color: #fff; /* Assurez-vous que le symbole est visible */
 }
 
-footer ul {
-    padding: 0;
-    margin: 0;
+#mes_photos img {
+    max-width: 48%;
+    height: auto;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#scrollup {
+    position: relative;
+    right: 350px;
+    bottom: 14px;
+    opacity: 0.5;
+    flex: 1;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+#scrollup:hover {
+    opacity: 1;
+}
+
+#scrollup img {
+    max-width: 40px;
+}
+
+@media all and (max-width: 1024px) {
+    main {
+        flex-direction: column;
+    }
+
+    main section {
+        margin-right: 0;
+    }
+
+    main aside {
+        margin-top: 20px; /* Espace entre section et aside */
+    }
 }
