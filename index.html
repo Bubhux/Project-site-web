@@ -9,13 +9,13 @@
 </head>
 
 <body>
-    <div id="scrollup"></div>
+    <div id="scroll_up"></div>
     <div id="nav1"></div>
     <div id="bloc_page">
         <header>
-            <div id="Titre_principal">
-                <div id="logo">
-                    <img src="static/img/lulu_logo_redimensionner.png" alt="Logo de Lulu" />
+            <div id="title">
+                <div id="lulu_logo">
+                    <img src="static/img/lulu_logo.png" alt="Logo de Lulu" />
                     <h1>Lulu</h1>
                 </div>
                 <h2>Voyage sur la faille de l'invocateur</h2>
@@ -32,18 +32,18 @@
         </header>
 
         <section id="banniere_image">
-            <div id="banniere_description">
+            <div id="banner_description">
                 <p>Pour me découvrir un peu plus, cliquez</p>
-                <a href="https://www.leagueoflegends.com/fr-fr/champions/lulu/" title="Voir l'article" class="bouton_rouge">
+                <a href="https://www.leagueoflegends.com/fr-fr/champions/lulu/" title="Voir l'article" class="button_red">
                     Voir l'article
-                    <img src="static/img/flecheblanchedroite.png" alt="Flèche droite">
+                    <img src="static/img/straight_white_arrow.png" alt="Flèche droite">
                 </a>
             </div>
         </section>
 
         <main>
             <section>
-                <h2><img src="static/img/League_of_legends_Logo_redimensionner.png" alt="Logo League of Legends" /><br />Je suis une magicienne yordle</h2>
+                <h2><img src="static/img/league_of_legends_logo.png" alt="Logo League of Legends" /><br />Je suis une magicienne yordle</h2>
                 <p>Mon rôle sur la faille de l'invocateur est le support. Je joue sur la voie du bas avec un coéquipier
                     qui lui est un adc son rôle est de faire des dégâts, je le soutiens lors de la phase de lane et tout
                     le long de la partie. Grâce à mes compétences et mon fidèle ami Pix, je le protège, le renforce avec
@@ -71,11 +71,11 @@
                     description de chaque rôle présent durant une partie. Il y a 5 rôles différents :</p>
 
                 <fieldset>
-                    <legend>Liste des rôles</legend>
-                    <div id="rôles">
+                    <legend><h3>Liste des rôles</h3></legend>
+                    <div id="roles">
                         <p>Aller directement à la section traitante</p>
                     </div>
-                    <div id="listes_rôles">
+                    <div id="lists_roles">
                         <ul>
                             <li><a href="#Jungle">Jungle</a></li>
                             <li><a href="#Top">Top</a></li>
@@ -86,9 +86,11 @@
                     </div>
                 </fieldset>
 
+                <fieldset>
                 <p>Avant de vous parler des differents rôles voici une image ou l'on peut voir les positions des 5
                     postes sur la map de la faille de l'invocateur, cliquez l'image pour agrandir !<br /></p>
-                    <a href="static/img/map_league_of_legends.jpg"><img src="static/img/map_league_of_legends_redi.jpg" alt="Carte de la faille de l'invocateur" class="flottant" title="Cliquez pour agrandir" /></a>
+                    <a href="static/img/map_league_of_legends.jpg"><img src="static/img/map_league_of_legends.jpg" alt="Carte de la faille de l'invocateur" class="flottant" title="Cliquez pour agrandir" /></a>
+                </fieldset>
 
                 <fieldset>
                     <legend><h2 id="Jungle">Jungle</h2></legend>
@@ -180,7 +182,7 @@
 
                 <form method="post" action="traitement.php">
                     <fieldset>
-                        <legend>Quels rôles préférez-vous ?</legend>
+                        <legend><h3>Quels rôles préférez-vous ?</h3></legend>
                         <p>
                             <input type="radio" name="rôles" value="top" id="top">
                             <label for="top">Top</label><br>
@@ -201,7 +203,7 @@
                 </video>
 
                 <fieldset>
-                    <legend>Votre avis intéresse Lulu</legend>
+                    <legend><h3>Votre avis intéresse Lulu</h3></legend>
                     <p>Avez-vous apprécié ce site web ? :</p>
                     <p>
                         <input type="radio" name="web" value="détester" id="détester">
@@ -226,8 +228,8 @@
 
             <aside>
                 <h2>À propos de l'auteur</h2>
-                <img src="static/img/bulle.png" alt="Fleche bulle" id="fleche_bulle" />
-                <p id="photo_lulu"><img src="static/img/lulu_icon_redimensionner.jpg" alt="Photo de Lulu" /></p>
+                <img src="static/img/left_grey_arrow.png" alt="Fleche bulle" id="fleche_bulle" />
+                <p id="photo_lulu"><img src="static/img/lulu_icon.jpg" alt="Photo de Lulu" /></p>
                 <p>Laissez-moi le temps de me présenter : je m'appelle Lulu, je suis née un 20 mars 2012.</p>
                 <p>Bien maigre, n'est-ce pas ? C'est pourquoi, aujourd'hui, j'ai décidé d'écrire ma biographie afin que vous sachiez qui je suis réellement.</p>
 
@@ -311,14 +313,31 @@
 
                 <p>D'ailleurs, elle a fini par réaliser qu'une partie de la Clairière sera toujours dans son cœur, où qu'elle aille.</p>
 
-                <p><img src="static/img/facebook.png" alt="Facebook" /><img src="static/img/twitter.png" alt="Twitter" /><img src="static/img/vimeo.png" alt="Vimeo" /><img src="static/img/instagram_icon.png" alt="Instagram" /><img src="static/img/rss.png" alt="RSS" /></p>
+                <p>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="static/img/facebook.png" alt="Facebook" />
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="static/img/twitter.png" alt="Twitter" />
+                    </a>
+                    <a href="https://www.vimeo.com" target="_blank">
+                        <img src="static/img/vimeo.png" alt="Vimeo" />
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="static/img/instagram_icon.png" alt="Instagram" />
+                    </a>
+                    <a href="https://feedly.com" target="_blank">
+                        <img src="static/img/rss.png" alt="RSS" />
+                    </a>
+                </p>
+                
             </aside>
         </main>
 
         <footer>
-            <div id="scrollup">
-                <a href="#scrollup">
-                    <img src="static/img/ico_top.png" alt="Retourner en haut" title="Retourner en haut">
+            <div id="scroll_up">
+                <a href="#scroll_up">
+                    <img src="static/img/top_black_arrow.png" alt="Retourner en haut" title="Retourner en haut">
                 </a>
             </div>
 
