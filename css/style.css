@@ -49,7 +49,7 @@ main aside {
 
 /* Eléments principaux de la page */
 body {
-    background: url('../static/img/fond_bleu_gris.png');
+    background: url('../static/img/blue_gray_background.png');
     font-family: 'Trebuchet MS', Arial, sans-serif;
     color: #181818;
 }
@@ -57,12 +57,6 @@ body {
 #bloc_page {
     width: 900px;
     margin: auto;
-}
-
-@media all and (max-width: 1024px) {
-    #bloc_page {
-        width: auto;
-    }
 }
 
 section h1,
@@ -75,24 +69,24 @@ nav a {
 
 /* Header */
 header {
-    background: url('../static/img/separateur_bleu_redi2.png') repeat-x bottom;
+    background: url('../static/img/blue_separator.png') repeat-x bottom;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding-bottom: 10px;
 }
 
-#titre_principal {
+#title {
     display: flex;
     flex-direction: column;
 }
 
-#logo {
+#lulu_logo {
     display: flex;
     align-items: baseline;
 }
 
-#logo img {
+#lulu_logo img {
     width: 99px;
     height: 100px;
 }
@@ -133,40 +127,19 @@ nav a:hover {
     border-bottom: 3px solid #9c9c9c;
 }
 
-@media all and (max-width: 1024px) {
-    nav {
-        text-align: left;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav li {
-        padding-left: 4px;
-    }
-
-    nav a {
-        font-size: 1.1em;
-    }
-
-    nav a:hover {
-        border-bottom: 0;
-    }
-}
 
 /* Bannière */
 #banniere_image {
     margin-top: 15px;
     height: 200px;
     border-radius: 5px;
-    background: url('../static/img/Banniere_league_of_legends_redimensionner.jpg') no-repeat;
+    background: url('../static/img/banner_league_of_legends.jpg') no-repeat;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 25px;
 }
 
-#banniere_description {
+#banner_description {
     position: absolute;
     bottom: 0;
     border-radius: 0 0 5px 5px;
@@ -179,16 +152,16 @@ nav a:hover {
     font-size: 0.8em;
 }
 
-#banniere_description p {
+#banner_description p {
     margin: 10px;
 }
 
-.bouton_rouge {
+.button_red {
     height: 20px;
     position: absolute;
     right: 5px;
     bottom: 10px;
-    background: url('../static/img/fond_degraderouge.png') repeat-x;
+    background: url('../static/img/red_gradient_background.png') repeat-x;
     border: 1px solid #760001;
     border-radius: 5px;
     font-size: 1.2em;
@@ -198,14 +171,8 @@ nav a:hover {
     text-decoration: none;
 }
 
-.bouton_rouge img {
+.button_red img {
     border: 0;
-}
-
-@media all and (max-width: 1024px) {
-    #banniere_image {
-        display: none;
-    }
 }
 
 /* Corps */
@@ -216,7 +183,7 @@ section {
 
 #section2 {
     position: fixed;
-    background: url('../static/img/fond_bleu_gris.png') center;
+    background: url('../static/img/blue_gray_background.png') center;
     opacity: 0.5;
     background-size: cover;
     text-align: right;
@@ -235,35 +202,6 @@ section {
 
 #section2 li {
     list-style-type: none;
-}
-
-@media all and (max-width: 1280px) {
-    #section2 {
-        margin-left: 100px;
-        margin-bottom: 10px;
-        padding: 0;
-        padding-right: 5px;
-        padding-bottom: 15px;
-        width: 98%;
-        bottom: 0;
-        height: 50px;
-        background: url('../static/img/fond_bleu_gris.png') center;
-        opacity: 0.4;
-        background-size: cover;
-        text-align: right;
-        border-radius: 5px;
-    }
-
-    #section2 ul a:hover {
-        text-decoration: underline;
-        color: red;
-    }
-
-    ul {
-        font-size: 0.8em;
-        font-weight: bold;
-        filter: opacity(1);
-    }
 }
 
 article,
@@ -303,13 +241,14 @@ aside h1 {
 
 #fleche_bulle {
     position: relative;
-    top: 100px;
+    top: 40px;
     /* left: 500px; */
     right: 143px;
 }
 
 #photo_lulu {
     text-align: center;
+    margin-top: -50px;
 }
 
 #photo_lulu img {
@@ -318,32 +257,22 @@ aside h1 {
 
 aside img {
     margin-right: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Ajoute une transition douce */
 }
 
-@media all and (max-width: 1024px) {
-    section {
-        flex-direction: column;
-    }
+aside img:hover {
+    transform: scale(1.2); /* Agrandit l'image de 10% */
+}
 
-    article,
-    aside {
-        width: auto;
-        margin-bottom: 15px;
-    }
+aside a {
+    color: inherit; /* Garde la couleur héritée du parent */
+    text-decoration: none; /* Enlève la décoration (soulignement) */
+}
 
-    #fleche_bulle {
-        display: none;
-    }
-
-    #photo_lulu img {
-        width: 110px;
-        float: right;
-        margin-left: 15px;
-    }
-
-    aside p:last-child {
-        text-align: center;
-    }
+aside a:hover {
+    color: inherit; /* Garde la couleur du lien même au survol */
+    text-decoration: none; /* Empêche tout soulignement ou autre décoration */
 }
 
 /*#mes_amis {
@@ -414,22 +343,14 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     color: rgb(18, 208, 135);
 }
 
 td,
 th {
-    border: 1px solid #706b64;
-}
-
-caption {
-    text-align: left;
-}
-
-td,
-th {
     font-size: 0.9em;
+    border: 1px solid #706b64;
 }
 
 .underline {
@@ -447,10 +368,6 @@ fieldset {
     /*padding: 20px; /* Espacement interne */
     margin: 20px 0; /* Espacement externe */
     /*background-color: #f9f9f9; /* Couleur de fond légère */
-}
-
-legend {
-    font-weight: bold;
 }
 
 textarea {
@@ -475,16 +392,17 @@ input[type="submit"]:hover {
 }
 
 legend {
-    font-weight: bold; /* Texte en gras */
+    /*text-shadow: 2px 2px 2px #3a3e42;
+    /*font-weight: bold; /* Texte en gras */
     padding: 0 10px; /* Espacement horizontal autour du texte */
     border-radius: 10px; /* Coins arrondis pour le fond */
 }
 
-#listes_rôles {
+#lists_roles {
     margin-top: 20px; /* Espacement au-dessus de la liste */
 }
 
-#listes_rôles ul {
+#lists_roles ul {
     list-style: none; /* Supprime les puces de la liste */
     padding: 0;
     margin: 0;
@@ -493,12 +411,12 @@ legend {
     /*align-items: center; /* Centre horizontalement */
 }
 
-#listes_rôles li {
+#lists_roles li {
     width: 100%;
     text-align: center; /* Centre le texte à l'intérieur de chaque élément */
 }
 
-#listes_rôles a {
+#lists_roles a {
     display: inline-block;
     width: 100%; /* Prend toute la largeur disponible */
     padding: 5px;
@@ -508,13 +426,13 @@ legend {
     color: #0b0c0d;
 }
 
-#listes_rôles a:hover {
+#lists_roles a:hover {
     background-color: #f1f1f1; /* Couleur de fond au survol */
     border-radius: 10px;
 }
 
 
-div #listes_rôles {
+div #lists_roles {
     /*display: inline-block;*/
     width: 100px;
     position: relative;
@@ -522,13 +440,13 @@ div #listes_rôles {
     padding-right: 15px;
 }
 
-div #rôles {
+div #roles {
     /*display: inline-block;*/
     /*width: 100px;*/
     padding: 0px 0px;
 }
 
-/*div #listes_rôles li:before {
+/*div #lists_roles li:before {
     content: "→";
 }*/
 
@@ -542,6 +460,7 @@ table {
 caption {
     /*font-size: 1.5em; /* Taille de la police du titre du tableau */
     margin-bottom: 10px; /* Espacement sous le titre */
+    text-align: left;
 }
 
 th, td {
@@ -567,7 +486,7 @@ th {
 footer {
     display: flex;
     justify-content: space-between;
-    background: url('../static/img/separateur_bleu_redi2.png') repeat-x top;
+    background: url('../static/img/blue_separator.png') repeat-x top;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
@@ -650,7 +569,7 @@ footer li:before {
     margin: 5px;
 }
 
-#scrollup {
+#scroll_up {
     position: relative;
     right: 350px;
     bottom: 14px;
@@ -661,12 +580,24 @@ footer li:before {
     /*align-items: center;*/
 }
 
-#scrollup:hover {
+#scroll_up:hover {
     opacity: 1;
 }
 
-#scrollup img {
+#scroll_up img {
     max-width: 40px;
+}
+
+@media all and (max-width: 1024px) {
+    #bloc_page {
+        width: auto;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    #banniere_image {
+        display: none;
+    }
 }
 
 @media all and (max-width: 1024px) {
@@ -680,5 +611,82 @@ footer li:before {
 
     main aside {
         margin-top: 20px; /* Espace entre section et aside */
+    }
+}
+
+@media all and (max-width: 1024px) {
+    nav {
+        text-align: left;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        padding-left: 4px;
+    }
+
+    nav a {
+        font-size: 1.1em;
+    }
+
+    nav a:hover {
+        border-bottom: 0;
+    }
+}
+
+@media all and (max-width: 1280px) {
+    #section2 {
+        margin-left: 100px;
+        margin-bottom: 10px;
+        padding: 0;
+        padding-right: 5px;
+        padding-bottom: 15px;
+        width: 98%;
+        bottom: 0;
+        height: 50px;
+        background: url('../static/img/blue_gray_background.png') center;
+        opacity: 0.4;
+        background-size: cover;
+        text-align: right;
+        border-radius: 5px;
+    }
+
+    #section2 ul a:hover {
+        text-decoration: underline;
+        color: red;
+    }
+
+    ul {
+        font-size: 0.8em;
+        font-weight: bold;
+        filter: opacity(1);
+    }
+}
+
+@media all and (max-width: 1024px) {
+    section {
+        flex-direction: column;
+    }
+
+    article,
+    aside {
+        width: auto;
+        margin-bottom: 15px;
+    }
+
+    #fleche_bulle {
+        display: none;
+    }
+
+    #photo_lulu img {
+        width: 110px;
+        float: right;
+        margin-left: 15px;
+    }
+
+    aside p:last-child {
+        text-align: center;
     }
 }
