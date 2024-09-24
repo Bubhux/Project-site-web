@@ -1,7 +1,3 @@
-![Static Badge](https://img.shields.io/badge/USE-HTML-blue?style=for-the-badge&logo=html5) ![Static Badge](https://img.shields.io/badge/USE-CSS-blue?style=for-the-badge&logo=css3)
-
-# Amélioration en cours de développement
-
 # Menu   
 1. **Informations générales**   
 2. **Objectifs du projet**   
