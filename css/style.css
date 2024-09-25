@@ -33,6 +33,32 @@ body {
     margin: auto;
 }
 
+#title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#lulu_logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+#lulu_logo img {
+    /*width: 99px;*/
+    /*height: 100px;*/
+    margin-right: 10px; /* Ajoute de l'espace entre l'image et le texte */
+}
+
+#lulu_logo h1 {
+    margin: 0; /* Retire les marges par défaut */
+}
+
+#title h2 {
+    margin: 0; /* Retire les marges par défaut */
+}
+
 section h1, footer h1, nav a {
     font-family: 'abel_regular', serif;
     font-weight: normal;
