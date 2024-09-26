@@ -120,8 +120,8 @@ footer {
 
 #scroll_up {
     position: absolute; /* Positionne l'élément par rapport au footer */
-    right: 2%; /* Utilisation de % pour s'adapter à la taille de la fenêtre */
-    bottom: 5%; /* Ajuste avec la taille de la fenêtre */
+    /*right: 2%; /* Utilisation de % pour s'adapter à la taille de la fenêtre */
+    bottom: 90%; /* Ajuste avec la taille de la fenêtre */
     opacity: 0.5;
     transition: opacity 0.3s ease;
 }
@@ -350,12 +350,12 @@ footer li:before {
 /* Alignement des images */
 aside img {
     margin-right: 5px;
-    cursor: pointer;
+    /*cursor: pointer;*/
     transition: transform 0.3s ease;
 }
 
 aside img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 aside a {
@@ -370,11 +370,9 @@ aside a:hover {
 
 #photo_lulu {
     text-align: center;
-    margin-top: -50px;
-}
-
-#photo_lulu img {
+    margin-top: -40px;
     border: 1px solid #181818;
+    border-radius: 5px;
 }
 
 #right_section {
@@ -420,6 +418,7 @@ aside a:hover {
 #bubble_arrow {
     position: relative;
     top: 40px;
+    right: 144px;
 }
 
 #p1, #p2 {
@@ -515,7 +514,8 @@ aside a:hover {
     }
 
     #bubble_arrow {
-        display: none;
+        /*display: none;*/
+        margin: 10px;
     }
 
     #photo_lulu img {
@@ -529,7 +529,6 @@ aside a:hover {
     }
 }
 
-/* Media query pour désactiver l'image de fond à max-width 1024px */
 @media (max-width: 1024px) {
     footer {
         background: none;
