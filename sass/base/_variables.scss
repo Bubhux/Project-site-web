@@ -1,0 +1,15 @@
+// sass/base/_variables.scss
+:root {
+    --background-body: linear-gradient(90deg, rgba(26,29,41,1) 0%, rgba(61,63,74,1) 25%, rgba(125,132,145,1) 75%, rgba(177,178,181,1) 100%);
+
+    --primary-color: #1A1D29;
+    --secondary-color: #3D3F4A;
+    --tertiary-color: #7D8491;
+    --quaternary-color: #B1B2B5;
+
+    --font-family-primary: 'Manrope', sans-serif;
+    --font-family-primary-extra-bold: 'Manrope', sans-serif;
+
+    --font-family-secondary: 'Outfit', sans-serif;
+    --font-family-secondary-black: 'Outfit', sans-serif;
+}

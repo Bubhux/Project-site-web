@@ -1,35 +1,83 @@
+:root {
+    --background-body: linear-gradient(90deg, rgba(26,29,41,1) 0%, rgba(61,63,74,1) 25%, rgba(125,132,145,1) 75%, rgba(177,178,181,1) 100%);
+    --primary-color: #1A1D29;
+    --secondary-color: #3D3F4A;
+    --tertiary-color: #7D8491;
+    --quaternary-color: #B1B2B5;
+
+    --border-color-light: #ccc;
+    --border-color-dark: #181818;
+    --highlight-color: #f1f1f1;
+    --hover-color: #9c9c9c;
+    --link-hover-color: rgb(18, 208, 135);
+    --link-color: #b6178e;
+
+    --text-color: #0b0c0d;
+    --text-color-light: #fff;
+
+    --footer-background: url('../static/img/blue_separator.png') repeat-x top;
+    --header-background: url('../static/img/blue_separator.png') repeat-x bottom;
+
+    /*Font Sizes*/
+    --font-size-small: 0.8em;
+    --font-size-default: 0.9em;
+    --font-size-large: 1.2em;
+    --font-size-extra-large: 1.3em;
+    --font-size-subtitle: 1.0em;
+
+    /*Font Families*/
+    --font-family-primary: 'Manrope', sans-serif;
+    --font-family-primary-extra-bold: 'Manrope', sans-serif;
+    --font-family-secondary: 'Outfit', sans-serif;
+    --font-family-secondary-black: 'Outfit', sans-serif;
+
+    /*Border radius and shadow*/
+    --border-radius-small: 4px;
+    --border-radius-large: 10px;
+    --box-shadow-light: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    /*Spacing*/
+    --spacing-small: 5px;
+    --spacing-medium: 10px;
+    --spacing-large: 20px;
+}
+
 @font-face {
-    font-family: 'abhaya_libreregular';
-    src: url('../static/fonts/AbhayaLibre-Regular-webfont.eot');
-    src: url('../static/fonts/AbhayaLibre-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../static/fonts/AbhayaLibre-Regular-webfont.woff2') format('woff2'),
-         url('../static/fonts/AbhayaLibre-Regular-webfont.woff') format('woff'),
-         url('../static/fonts/AbhayaLibre-Regular-webfont.ttf') format('truetype'),
-         url('../static/fonts/AbhayaLibre-Regular-webfont.svg#abhaya_libreregular') format('svg');
-    font-weight: normal;
+    font-family: 'Manrope';
+    src: url('/static/fonts/Manrope-Regular.ttf') format('truetype');
+    font-weight: 400;  /*Regular*/
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'abel_regular';
-    src: url('../static/fonts/abel_regular-webfont.eot');
-    src: url('../static/fonts/abel_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../static/fonts/abel_regular-webfont.woff2') format('woff2'),
-         url('../static/fonts/abel_regular-webfont.woff') format('woff'),
-         url('../static/fonts/abel_regular-webfont.ttf') format('truetype'),
-         url('../static/fonts/abel_regular-webfont.svg#abel_regular') format('svg');
-    font-weight: normal;
+    font-family: 'Manrope';
+    src: url('/static/fonts/Manrope-ExtraBold.ttf') format('truetype');
+    font-weight: 800;  /*ExtraBold*/
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('/static/fonts/Outfit-Regular.ttf') format('truetype');
+    font-weight: 400;  /*Regular*/
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('/static/fonts/Outfit-Black.ttf') format('truetype');
+    font-weight: 800;  /*Black*/
     font-style: normal;
 }
 
 body {
-    background: linear-gradient(90deg, rgba(26,29,41,1) 0%, rgba(61,63,74,1) 25%, rgba(125,132,145,1) 75%, rgba(177,178,181,1) 100%);
-    font-family: 'Trebuchet MS', Arial, sans-serif;
-    color: #181818;
+    background: var(--background-body);
+    font-family: var(--font-family-primary);
+    color: var(--text-color);
 }
 
 fieldset {
-    border: 1px solid #ccc;
+    border: 1px solid var(--tertiary-color);
     padding: 10px;
     margin: 20px 0;
     border-radius: 10px;
@@ -46,10 +94,6 @@ fieldset {
     margin-bottom: 10px;
 }
 
-.main__role-table-head {
-    /*background-color: #f4f4f4;*/
-}
-
 .main__role-table-row {
     border-bottom: 1px solid #ddd;
 }
@@ -57,7 +101,7 @@ fieldset {
 .main__role-table-header,
 .main__role-table-cell {
     padding: 10px;
-    text-align: left;
+    /*text-align: left;*/
 }
 
 .main__role-table-header {
@@ -65,11 +109,12 @@ fieldset {
 }
 
 .main__role-table-cell {
-    text-align: center;
+    /*text-align: center;*/
+    font-size: var(--font-size-small);
 }
 
 th, td {
-    font-size: 0.9em;
+    font-size: var(--font-size-default);
     border: 1px solid #ccc;
     padding: 8px;
     font-weight: bold;
@@ -113,7 +158,7 @@ th, td {
     justify-content: space-between;
     align-items: flex-end;
     padding: 20px;
-    background: url('../static/img/blue_separator.png') repeat-x bottom;
+    background: var(--header-background);
     border-radius: 10px;
 }
 
@@ -130,8 +175,8 @@ th, td {
 }
 
 .header__subtitle {
-    font-family: 'abel_regular', serif;
-    font-size: 1.1em;
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-subtitle);
     margin-top: 0;
 }
 
@@ -146,7 +191,7 @@ th, td {
 }
 
 .nav__link {
-    font-size: 1.3em;
+    font-size: var(--font-size-extra-large);
     color: #181818;
     padding-bottom: 3px;
     text-decoration: none;
@@ -160,12 +205,37 @@ th, td {
 /* Block: footer */
 .footer {
     display: flex;
-    background: url('../static/img/blue_separator.png') repeat-x top;
+    background: var(--footer-background);
     margin: 20px;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: stretch;
     position: relative; /* Pour permettre à .footer__scroll-up d'être positionné par rapport au footer */
+}
+
+.footer__tweet-heading {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-extra-large);
+}
+
+.footer__tweet p {
+    font-family: var(--font-family-secondary-black);
+    font-size: var(--font-size-default);
+}
+
+.footer__my-friends-heading {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-extra-large);
+}
+
+.footer__friends-list {
+    font-family: var(--font-family-secondary-black);
+    font-size: var(--font-size-default);
+}
+
+.footer__my-photos-heading {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-extra-large);
 }
 
 .footer__scroll-up {
@@ -185,12 +255,12 @@ th, td {
 }
 
 .footer__subtitle {
-    font-size: 1.2em;
+    font-size: var(--font-size-large);
     margin-bottom: 10px;
 }
 
 .footer__text {
-    font-size: 0.9em;
+    font-size: var(--font-size-default);
     margin-bottom: 10px;
 }
 
@@ -247,50 +317,32 @@ section {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 5px;
     padding: 10px;
-    color: white;
+    color: var(--text-color-light);
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    /*width: 350px;*/
-}
-
-.main__author-headline {
-    /* Style pour le titre */
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-default);
+    /* width: 350px; */
 }
 
 .main__author-arrow {
     position: relative;
-    top: 40px;
-    right: 144px;
-}
-
-.main__author-link {
-    /* Style pour le lien contenant l'image */
+    top: 30px;
+    right: 146px;
 }
 
 .main__author-photo {
     text-align: center;
-    margin-top: -40px;
+    margin: -500px 0 0px 0;
     border: 1px solid #181818;
     border-radius: 5px;
+    /* Enlever les marges négatives pour éviter l'espace excessif */
 }
 
 .main__author-photo img {
     margin-right: 5px;
-    /* cursor: pointer; */
     transition: transform 0.3s ease;
-}
-
-.main__author-text {
-    /* Style pour le texte */
-}
-
-.main__author-social {
-    /* Style pour la section des réseaux sociaux */
-}
-
-.main__author-social-link {
-    /* Style pour les liens des réseaux sociaux */
 }
 
 .main__author-social-icon {
@@ -298,6 +350,7 @@ section {
     height: auto;
     border-radius: 10px;
     margin: 2px;
+    transition: transform 0.3s ease;
 }
 
 .main__author-photo {
@@ -305,15 +358,33 @@ section {
 }
 
 .main__author-photo:hover {
-    transform: scale(1.1); /* L'image grossit de 10% lors du survol */
-}
-
-.main__author-social-icon {
-    transition: transform 0.3s ease; /* Animation de la transformation */
+    transform: scale(1.1);
 }
 
 .main__author-social-icon:hover {
-    transform: scale(1.2); /* Grossit l'icône de 10% lors du survol */
+    transform: scale(1.2);
+}
+
+.main__author-text {
+    margin: 10px 0 10px 0; /* Ajuster la marge autour du texte */
+}
+
+.main__author-main-headline {
+    margin: 20px 0; /* Ajuster la marge autour du titre principal */
+}
+
+.main__author-headline {
+    margin: -10px 0 -10px 0; /* Ajuster la marge autour du titre secondaire */
+}
+
+/* Réduit la marge inférieure du dernier paragraphe */
+.main__author-text:last-of-type {
+    margin-bottom: 10px; /* Ajustez la valeur selon vos besoins */
+}
+
+/* Ou, vous pouvez également ajuster la marge supérieure du conteneur social */
+.main__author-social {
+    margin-top: -50px; /* Ajustez la valeur selon vos besoins */
 }
 
 /* Block: menu-scroll */
@@ -334,7 +405,7 @@ section {
     margin-right: 5px;
     padding-right: 10px;
     opacity: 0.5;
-    font-size: 0.9em;
+    font-size: var(--font-size-default);
 }
 
 .menu-scroll__item {
@@ -362,7 +433,7 @@ section {
     padding-left: 4px;
     background-color: rgba(24, 24, 24, 0.6);
     color: white;
-    font-size: 0.8em;
+    font-size: var(--font-size-small);
 }
 
 .banner__description p {
@@ -377,7 +448,7 @@ section {
     background: url('../static/img/red_gradient_background.png') repeat-x;
     border: 1px solid #760001;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: var(--font-size-large);
     text-align: center;
     padding: 3px 8px 0;
     color: white;
@@ -410,10 +481,6 @@ section {
     padding: 10px;
     margin: 20px 0;
     border-radius: 10px;
-}
-
-.main__feedback-form__label {
-
 }
 
 .main__feedback-form__textarea {
@@ -473,7 +540,7 @@ input[type="submit"] {
 }
 
 .main__roles-link:hover {
-    background-color: #f1f1f1;
+    background-color: var(--quaternary-color);
     border-radius: 10px;
 }
 
@@ -490,7 +557,7 @@ input[type="submit"] {
 }
 
 .table__header, .table__cell {
-    font-size: 0.9em;
+    font-size: var(--font-size-default);
     border: 1px solid #ccc;
     padding: 8px;
     font-weight: bold;
