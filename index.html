@@ -210,6 +210,7 @@
                         Ce tableau montre que peu importe le champion que vous jouez, ils peuvent tous avoir une flexibilité à d'autres rôles et postes, selon votre niveau de jeu et de maîtrise.
                     </p>
                 </fieldset>
+
                 <form class="feedback-form" method="post" action="traitement.php">
                     <fieldset class="feedback-form__fieldset">
                         <legend class="feedback-form__legend">
@@ -379,18 +380,24 @@
             </div>
 
             <div class="footer__tweet">
-                <h2 class="footer__tweet-heading">Mon dernier tweet</h2>
-                <p class="footer__tweet-text footer__tweet-text--highlighted">J'ai déjà vu cet écureuil quelque part !</p>
-                <p class="footer__tweet-text footer__tweet-text--date">le 1er janvier à 00h00 !</p>
-                <p class="footer__tweet-info">Pour plus d'informations :</p>
-                <p class="footer__tweet-contact">
-                    <a href="mailto:bubhuxpaindepice@gmail.com" title="bubhuxpaindepice@gmail.com" class="footer__tweet-email">Envoyez-moi un e-mail !</a>
-                </p>
+                <fieldset>
+                    <legend>
+                        <h2 class="footer__tweet-heading">Mon dernier tweet</h2>
+                    </legend>
+                    <p class="footer__tweet-text footer__tweet-text--highlighted">J'ai déjà vu cet écureuil quelque part !</p>
+                    <p class="footer__tweet-text footer__tweet-text--date">le 1er janvier à 00h00 !</p>
+                    <p class="footer__tweet-info">Pour plus d'informations :</p>
+                    <p class="footer__tweet-contact">
+                        <a href="mailto:bubhuxpaindepice@gmail.com" title="bubhuxpaindepice@gmail.com" class="footer__tweet-email">Envoyez-moi un e-mail !</a>
+                    </p>
+                </fieldset>
             </div>
 
-            <div class="footer__right-section">
-                <div class="footer__my-friends">
-                    <h2 class="footer__my-friends-heading">Mes amis</h2>
+            <div class="footer__my-friends">
+                <fieldset>
+                    <legend>
+                        <h2 class="footer__my-friends-heading">Mes amis</h2>
+                    </legend>
                     <div class="footer__friends-list">
                         <ul class="footer__friends-list-group">
                             <li class="footer__friends-list-item"><a href="#" class="footer__friends-list-link">Macaron le hérisson</a></li>
@@ -405,10 +412,14 @@
                             <li class="footer__friends-list-item"><a href="#" class="footer__friends-list-link">Cracotte la marmotte</a></li>
                         </ul>
                     </div>
-                </div>
+                </fieldset>
+            </div>
 
-                <div class="footer__my-photos">
-                    <h2 class="footer__my-photos-heading">Mes photos souvenirs de vacances</h2>
+            <div class="footer__my-photos">
+                <fieldset>
+                    <legend>
+                        <h2 class="footer__my-photos-heading">Mes photos souvenirs de vacances</h2>
+                    </legend>
                     <p class="footer__my-photos-gallery">
                         <a href="static/img/pool_party_photo1.jpg" class="footer__my-photos-link">
                             <img src="static/img/pool_party_photo1.jpg" alt="Photographie souvenir 1" class="footer__my-photos-img">
@@ -423,7 +434,7 @@
                             <img src="static/img/pool_party_photo4.jpg" alt="Photographie souvenir 4" class="footer__my-photos-img">
                         </a>
                     </p>
-                </div>
+                </fieldset>
             </div>
         </footer>
 

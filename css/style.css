@@ -81,6 +81,7 @@ fieldset {
     padding: 10px;
     margin: 20px 0;
     border-radius: 10px;
+    box-shadow: 1px 1px 5px 0 rgba(227, 228, 237, 0.37);
 }
 
 .main__role-table {
@@ -221,13 +222,22 @@ th, td {
 
 /* Block: footer */
 .footer {
+    /*border: 1px solid var(--quaternary-color);*/
     display: flex;
     background: var(--footer-background);
-    margin: 20px;
-    flex-wrap: wrap;
-    flex-direction: row;
+    margin: 20px auto; /* Centrer le footer avec des marges automatiques */
+    justify-content: center;
     align-items: stretch;
+    padding: 20px;
+    max-width: 1200px; /* Limiter la largeur maximale du footer (modifiable selon les besoins) */
+    /*width: 100%; /* Le footer prendra toute la largeur disponible */
     position: relative; /* Pour permettre à .footer__scroll-up d'être positionné par rapport au footer */
+}
+
+.footer__tweet, .footer__my-friends, .footer__my-photos {
+    flex: 1; /* Chaque bloc prendra un tiers de l'espace disponible */
+    margin: 10px;
+    /*min-width: 250px; /* Fixer une largeur minimale pour éviter que les blocs soient trop petits */
 }
 
 .footer__tweet-heading {
@@ -262,6 +272,17 @@ th, td {
     font-family: var(--font-family-secondary-black);
     font-size: var(--font-size-default);
     color: var(--text-color);
+    /*display: flex;*/
+    justify-content: space-between;
+    list-style: none;
+    padding-right: 10px;
+    margin: 0;
+    /*flex: 1 1 45%;*/
+}
+
+.footer__friends-list-item {
+    /*margin-bottom: 10px;*/
+    white-space: nowrap;
 }
 
 .footer__friends-list-link {
@@ -280,11 +301,39 @@ th, td {
 .footer__my-photos-heading {
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-extra-large);
+    white-space: nowrap; /* Empêche le texte de se casser en plusieurs lignes */
+}
+
+.footer__my-photos-img {
+    transition: transform 0.3s ease; /* Ajoute une transition fluide */
+    border-radius: 10px;
+    margin: 2px;
+    max-width: 100px; /* Ajuste la taille maximale des images si nécessaire */
+    height: auto; /* Garde le ratio d'aspect des images */
+}
+
+.footer__my-photos-img:hover {
+    transform: scale(1.1); /* Grossit l'image de 10% lors du survol */
+}
+
+.footer__my-photos-gallery {
+    display: flex;
+    flex-wrap: nowrap; /* Empêche les images de se répartir sur plusieurs lignes */
+    gap: 2px; /* Ajoute un espace entre les images */
+    justify-content: center;
+}
+
+.footer__tweet-text, 
+.footer__tweet-info, 
+.footer__tweet-contact {
+    white-space: nowrap; /* Empêche le texte de se casser en plusieurs lignes */
+    overflow: hidden; /* Cache tout texte qui dépasse la largeur du conteneur */
+    text-overflow: ellipsis; /* Ajoute des points de suspension (...) si le texte est trop long */
 }
 
 .footer__scroll-up {
     position: absolute;
-    bottom: 92%;
+    bottom: 89%;
     right: 50%;
     opacity: 0.5;
     transition: opacity 0.3s ease;
@@ -306,18 +355,6 @@ th, td {
 .footer__text {
     font-size: var(--font-size-default);
     margin-bottom: 10px;
-}
-
-.footer__my-photos-img {
-    transition: transform 0.3s ease; /* Ajoute une transition fluide */
-    max-width: 48%;
-    height: auto;
-    border-radius: 10px;
-    margin: 2px;
-}
-
-.footer__my-photos-img:hover {
-    transform: scale(1.1); /* Grossit l'image de 10% lors du survol */
 }
 
 .footer__my-photos-link {
@@ -523,13 +560,6 @@ section {
     border-color: #0056b3;
 }
 
-.fieldset {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 10px;
-}
-
 .main__feedback-form__textarea {
     display: block;
     margin: 20px 0
@@ -544,19 +574,6 @@ input[type="submit"] {
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
-}
-
-.link {
-    text-decoration: underline;
-    color: #b6178e;
-}
-
-.link:hover {
-    color: rgb(18, 208, 135);
-}
-
-.underline {
-    text-decoration: underline;
 }
 
 /* Block: lists-roles */
@@ -591,11 +608,6 @@ input[type="submit"] {
     border-radius: 10px;
 }
 
-.footer__item:before {
-    content: "→ ";
-    color: #fff;
-}
-
 /* Block: aside */
 .aside__image {
     margin-right: 5px;
@@ -606,56 +618,12 @@ input[type="submit"] {
     transform: scale(1.1);
 }
 
-.aside__link {
-    color: inherit;
-    text-decoration: none;
-}
-
-.aside__link:hover {
-    color: inherit;
-    text-decoration: none;
-}
-
 /* Block: photo-lulu */
 .photo-lulu {
     text-align: center;
     margin-top: -40px;
     border: 1px solid var(--quaternary-color);
     border-radius: 5px;
-}
-
-/* Block: right-section */
-.right-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.right-section__item {
-    margin-bottom: 3px;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Ajoute une transition douce */
-}
-
-.right-section__item:hover img {
-    transform: scale(1.2); /* Agrandit l'image de 20% */
-}
-
-.friends-list {
-    display: flex;
-    justify-content: space-between;
-}
-
-.friends-list__list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex: 1 1 45%;
-}
-
-.friends-list__item {
-    margin-bottom: 10px;
-    white-space: nowrap;
 }
 
 .my-photos__image {
@@ -669,10 +637,6 @@ input[type="submit"] {
     position: relative;
     top: 40px;
     right: 144px;
-}
-
-.p1, .p2 {
-    line-height: 0.1em;
 }
 
 .content__underline {
