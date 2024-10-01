@@ -384,6 +384,7 @@ section {
 }
 
 .main__author {
+    margin-top: 120px;
     display: flex;
     background-color: #706b64;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -392,24 +393,27 @@ section {
     color: var(--text-color-light);
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-default);
     /* width: 350px; */
+    /*margin: 5px 0; /* Ajustez selon vos besoins */
+    height: 100%;
 }
 
 .main__author-arrow {
     position: relative;
     top: 30px;
-    right: 146px;
+    right: 135px;
 }
 
 .main__author-photo {
     text-align: center;
-    margin: -500px 0 0px 0;
+    /*margin: -500px 0 0px 0;*/
     border: 1px solid #181818;
     border-radius: 5px;
-    /* Enlever les marges négatives pour éviter l'espace excessif */
+    transition: transform 0.3s ease;
+    margin-top: 5px;
 }
 
 .main__author-photo img {
@@ -418,14 +422,10 @@ section {
 }
 
 .main__author-social-icon {
-    max-width: 48%;
+    max-width: 50%;
     height: auto;
     border-radius: 10px;
-    margin: 2px;
-    transition: transform 0.3s ease;
-}
-
-.main__author-photo {
+    margin: 1px;
     transition: transform 0.3s ease;
 }
 
@@ -434,20 +434,21 @@ section {
 }
 
 .main__author-social-icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .main__author-text {
-    margin: 10px 0 10px 0; /* Ajuster la marge autour du texte */
+    margin: 20px 0; /* Ajustez les valeurs selon vos préférences */
 }
 
 .main__author-main-headline {
-    margin: 20px 0; /* Ajuster la marge autour du titre principal */
+    margin-bottom: 5px;
 }
 
 .main__author-headline {
-    margin: -10px 0 -10px 0; /* Ajuster la marge autour du titre secondaire */
+    margin: 20px 0; /* Vous pouvez réduire ou augmenter la valeur */
 }
+
 
 /* Réduit la marge inférieure du dernier paragraphe */
 .main__author-text:last-of-type {
@@ -456,7 +457,7 @@ section {
 
 /* Ou, vous pouvez également ajuster la marge supérieure du conteneur social */
 .main__author-social {
-    margin-top: -50px; /* Ajustez la valeur selon vos besoins */
+    margin-top: 20px; /* Ajustez la valeur selon vos besoins */
 }
 
 /* Block: menu-scroll */
@@ -789,5 +790,33 @@ input[type="submit"] {
 @media (max-width: 1024px) {
     footer {
         background: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        flex-direction: column; /* Empile les blocs verticalement */
+        /*align-items: flex-start; /* Aligner les blocs au début du conteneur */
+    }
+
+    .footer__tweet {
+        order: 1; /* Positionne le bloc des tweets en premier */
+        margin: -10px 0 -10px 0;
+    }
+
+    .footer__my-friends {
+        order: 2; /* Positionne le bloc des amis en deuxième */
+        margin: -10px 0 -10px 0;
+    }
+
+    .footer__my-photos {
+        order: 3; /* Positionne le bloc des photos en dernier */
+        margin: -10px 0 -10px 0;
+    }
+
+    .footer__scroll-up {
+        /*align-self: flex-end; /* Aligner le bloc de retour en haut à la fin du conteneur */
+        /*margin-top: 20px; /* Ajouter un espace au-dessus pour le séparer des autres blocs */
+        margin-bottom: 47px; /* Ajouter un espace en dessous pour plus d'espacement */
     }
 }
