@@ -13,7 +13,7 @@
     --link-color: #b6178e;
 
     --text-color: #0b0c0d;
-    --text-color-light: #fff;
+    --text-color-light: #ece9e9;
 
     --footer-background: url('../static/img/blue_separator.png') repeat-x top;
     --header-background: url('../static/img/blue_separator.png') repeat-x bottom;
@@ -137,14 +137,16 @@ th, td {
 }
 
 /* Block: title */
-.title {
+.header__title {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: var(--quaternary-color);
+    text-shadow: 2px 2px 2px #000000;
 }
 
 /* Element: title-logo */
-.title__logo {
+.header__logo {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -201,6 +203,7 @@ th, td {
 .nav ul {
     list-style-type: none;
     display: flex;
+    text-shadow: 2px 2px 2px #9f9f9f;
 }
 
 .nav__item {
@@ -243,6 +246,7 @@ th, td {
 .footer__tweet-heading {
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-extra-large);
+    text-shadow: 2px 2px 2px #76787b;
 }
 
 .footer__tweet p {
@@ -266,6 +270,7 @@ th, td {
 .footer__my-friends-heading {
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-extra-large);
+    text-shadow: 2px 2px 2px #969696;
 }
 
 .footer__friends-list {
@@ -302,6 +307,7 @@ th, td {
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-extra-large);
     white-space: nowrap; /* Empêche le texte de se casser en plusieurs lignes */
+    text-shadow: 2px 2px 2px #b4b4b4;
 }
 
 .footer__my-photos-img {
@@ -383,7 +389,7 @@ section {
     margin-right: 20px;
 }
 
-.main__author {
+.main__aside-author {
     margin-top: 120px;
     display: flex;
     background-color: #706b64;
@@ -401,13 +407,13 @@ section {
     height: 100%;
 }
 
-.main__author-arrow {
+.main__aside-author-arrow {
     position: relative;
     top: 30px;
     right: 135px;
 }
 
-.main__author-photo {
+.main__aside-author-photo {
     text-align: center;
     /*margin: -500px 0 0px 0;*/
     border: 1px solid #181818;
@@ -416,12 +422,12 @@ section {
     margin-top: 5px;
 }
 
-.main__author-photo img {
+.main__aside-author-photo img {
     margin-right: 5px;
     transition: transform 0.3s ease;
 }
 
-.main__author-social-icon {
+.main__aside-author-social-icon {
     max-width: 50%;
     height: auto;
     border-radius: 10px;
@@ -429,23 +435,23 @@ section {
     transition: transform 0.3s ease;
 }
 
-.main__author-photo:hover {
+.main__aside-author-photo:hover {
     transform: scale(1.1);
 }
 
-.main__author-social-icon:hover {
+.main__aside-author-social-icon:hover {
     transform: scale(1.1);
 }
 
-.main__author-text {
+.main__aside-author-text {
     margin: 20px 0; /* Ajustez les valeurs selon vos préférences */
 }
 
-.main__author-main-headline {
+.main__aside-author-main-headline {
     margin-bottom: 5px;
 }
 
-.main__author-headline {
+.main__aside-author-headline {
     margin: 20px 0; /* Vous pouvez réduire ou augmenter la valeur */
 }
 
@@ -643,6 +649,7 @@ input[type="submit"] {
 .content__underline {
     font-family: var(--font-family-primary-extra-bold);
     font-size: var(--font-size-large);
+    text-shadow: 2px 2px 2px #3a3e42;
 }
 
 .content__link {

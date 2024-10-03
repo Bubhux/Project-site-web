@@ -1,0 +1,9 @@
+// sass/base/_header.scss
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+    background: var(--header-background);
+    border-radius: 10px;
+}

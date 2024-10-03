@@ -1,0 +1,19 @@
+// sass/base/_menu-scroll.scss
+.menu-scroll {
+    position: fixed;
+    background: var(--background-body);
+    background-size: cover;
+    text-align: right;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    right: 0;
+    bottom: 0;
+    width: 155px;
+    border: 1px solid var(--quaternary-color);
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+    padding-right: 10px;
+    opacity: 0.5;
+    font-size: var(--font-size-default);
+}

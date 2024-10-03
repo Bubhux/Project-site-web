@@ -1,0 +1,10 @@
+// sass/base/_banner.scss
+.banner {
+    margin-top: 15px;
+    height: 200px;
+    border-radius: 5px;
+    background: url('../static/img/banner_league_of_legends.jpg') no-repeat;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 25px;
+}
