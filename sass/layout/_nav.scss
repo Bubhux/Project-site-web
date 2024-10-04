@@ -1,10 +1,12 @@
-// sass/base/_nav.scss
-.nav ul {
-    list-style-type: none;
-    display: flex;
-    text-shadow: 2px 2px 2px #9f9f9f;
-}
+// sass/layout/_nav.scss
+.nav {
+    ul {
+        list-style-type: none;
+        display: flex;
+        text-shadow: 2px 2px 2px #9f9f9f;
+    }
 
-.nav__item {
-    margin-right: 15px;
+    .nav__item {
+        margin-right: 15px;
+    }
 }

@@ -1,0 +1,34 @@
+// sass/components/_table.scss
+.main__role-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+
+    &-caption {
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    &-row {
+        border-bottom: 1px solid var(--quaternary-color);
+    }
+
+    &-header,
+    &-cell {
+        font-size: var(--font-size-default);
+        border: 1px solid var(--quaternary-color);
+        padding: 8px;
+
+        // &-header spécifique
+        &.main__role-table-header {
+            font-size: var(--font-size-default);
+        }
+
+        // &-cell spécifique
+        &.main__role-table-cell {
+            font-size: var(--font-size-small);
+            // text-align: center;
+        }
+    }
+}

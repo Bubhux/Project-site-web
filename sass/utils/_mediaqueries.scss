@@ -1,82 +1,74 @@
 // sass/utils/_mediaqueries.scss
+// Media queries pour les écrans jusqu'à 1024px
 @media all and (max-width: 1024px) {
-    #bloc_page {
+
+    .page {
         width: auto;
     }
-}
 
-@media all and (max-width: 1024px) {
-    #banniere_image {
+    .banner {
         display: none;
     }
-}
 
-@media all and (max-width: 1024px) {
     main {
         flex-direction: column;
+
+        section {
+            margin-right: 0;
+        }
+
+        aside {
+            margin-top: 20px; // Espace entre section et aside
+        }
     }
 
-    main section {
-        margin-right: 0;
+    .nav__link {
+        font-size: var(--font-size-large);
+        font-family: var(--font-family-secondary-black);
+        color: var(--text-color);
+        text-decoration: none;
+
+        &:hover {
+            font-size: var(--font-size-extra-large);
+            color: var(--text-color-light);
+            text-decoration: none;
+            border-bottom: none;
+        }
     }
 
-    main aside {
-        margin-top: 20px; /* Espace entre section et aside */
-    }
-}
-
-@media all and (max-width: 1024px) {
     nav {
         text-align: left;
+
+        ul {
+            flex-direction: column;
+        }
+
+        li {
+            padding-left: 4px;
+        }
+
+        a {
+            font-size: 1.1em;
+
+            &:hover {
+                border-bottom: 0;
+            }
+        }
     }
 
-    nav ul {
-        flex-direction: column;
+    .main__aside-author-arrow {
+        margin: 10px;
     }
 
-    nav li {
-        padding-left: 4px;
+    .main__aside-author-photo {
+        width: 110px;
+        margin: 5px;
     }
 
-    nav a {
-        font-size: 1.1em;
+    .main__aside-author-social {
+        margin-top: 10px;
     }
 
-    nav a:hover {
-        border-bottom: 0;
-    }
-}
-
-@media all and (max-width: 1280px) {
-    #menu_scroll {
-        margin-left: 100px;
-        margin-bottom: 10px;
-        padding: 0;
-        padding-right: 5px;
-        padding-bottom: 15px;
-        width: 98%;
-        bottom: 0;
-        height: 50px;
-        background: url('../static/img/blue_gray_background.png') center;
-        opacity: 0.4;
-        background-size: cover;
-        text-align: right;
-        border-radius: 5px;
-    }
-
-    #menu_scroll ul a:hover {
-        text-decoration: underline;
-        color: red;
-    }
-
-    ul {
-        font-size: 0.8em;
-        font-weight: bold;
-        filter: opacity(1);
-    }
-}
-
-@media all and (max-width: 1024px) {
     section {
         flex-direction: column;
     }
@@ -87,24 +79,70 @@
         margin-bottom: 15px;
     }
 
-    #bubble_arrow {
-        /*display: none;*/
-        margin: 10px;
-    }
-
-    #photo_lulu img {
-        width: 110px;
-        float: right;
-        margin-left: 15px;
-    }
-
     aside p:last-child {
         text-align: center;
     }
-}
 
-@media (max-width: 1024px) {
     footer {
         background: none;
+    }
+}
+
+// Media queries pour les écrans jusqu'à 1280px
+@media all and (max-width: 1280px) {
+
+    .menu-scroll {
+        margin-left: 100px;
+        margin-bottom: 10px;
+        padding: 0 5px 15px;
+        width: 98%;
+        height: 60px;
+        background: var(--background-body);
+        opacity: 0.4;
+        background-size: cover;
+        text-align: right;
+        border-radius: 5px;
+    }
+
+    .menu-scroll__link {
+        list-style-type: none;
+        color: var(--text-color-light);
+        text-decoration: none;
+        font-size: var(--font-size-default);
+        
+        ul {
+            font-size: var(--font-size-default);
+        }
+    }
+
+    .menu-scroll__link ul a:hover {
+        text-decoration: underline;
+    }
+}
+
+// Media queries spécifiques à l'affichage d'écran
+@media screen and (max-width: 1024px) {
+
+    .footer {
+        flex-direction: column; // Empile les blocs verticalement
+
+        &__tweet {
+            order: 1; // Positionne le bloc des tweets en premier
+            margin: -10px 0;
+        }
+
+        &__my-friends {
+            order: 2; // Positionne le bloc des amis en deuxième
+            margin: -10px 0;
+        }
+
+        &__my-photos {
+            order: 3; // Positionne le bloc des photos en dernier
+            margin: -10px 0;
+        }
+
+        &__scroll-up {
+            margin-bottom: 47px; // Ajoute un espace en dessous pour plus d'espacement
+        }
     }
 }

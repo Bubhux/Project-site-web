@@ -18,25 +18,21 @@
     --footer-background: url('../static/img/blue_separator.png') repeat-x top;
     --header-background: url('../static/img/blue_separator.png') repeat-x bottom;
 
-    /*Font Sizes*/
     --font-size-small: 0.8em;
     --font-size-default: 0.9em;
     --font-size-large: 1.2em;
     --font-size-extra-large: 1.3em;
     --font-size-subtitle: 1.0em;
 
-    /*Font Families*/
     --font-family-primary: 'Manrope', sans-serif;
     --font-family-primary-extra-bold: 'Manrope', sans-serif;
     --font-family-secondary: 'Outfit', sans-serif;
     --font-family-secondary-black: 'Outfit', sans-serif;
 
-    /*Border radius and shadow*/
     --border-radius-small: 4px;
     --border-radius-large: 10px;
     --box-shadow-light: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-    /*Spacing*/
     --spacing-small: 5px;
     --spacing-medium: 10px;
     --spacing-large: 20px;
@@ -118,12 +114,6 @@ fieldset {
     font-size: var(--font-size-small);
 }
 
-.table__header, .table__cell {
-    font-size: var(--font-size-default);
-    border: 1px solid var(--quaternary-color);
-    padding: 8px;
-}
-
 th, td {
     font-size: var(--font-size-default);
     padding: 8px;
@@ -152,18 +142,6 @@ th, td {
     flex-direction: row-reverse;
 }
 
-.title__logo img {
-    margin-right: 10px; /* Ajoute de l'espace entre l'image et le texte */
-}
-
-.title__logo h1 {
-    margin: 0; /* Retire les marges par défaut */
-}
-
-.title__subtitle {
-    margin: 0; /* Retire les marges par défaut */
-}
-
 /* Block: header */
 .header, .footer {
     display: flex;
@@ -178,12 +156,6 @@ th, td {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.header__logo {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
 }
 
 .header__logo-title {
@@ -228,11 +200,11 @@ th, td {
     /*border: 1px solid var(--quaternary-color);*/
     display: flex;
     background: var(--footer-background);
-    margin: 20px auto; /* Centrer le footer avec des marges automatiques */
+    margin: 20px auto; /* Centre le footer avec des marges automatiques */
     justify-content: center;
     align-items: stretch;
     padding: 20px;
-    max-width: 1200px; /* Limiter la largeur maximale du footer (modifiable selon les besoins) */
+    max-width: 1200px; /* Limite la largeur maximale du footer (modifiable selon les besoins) */
     /*width: 100%; /* Le footer prendra toute la largeur disponible */
     position: relative; /* Pour permettre à .footer__scroll-up d'être positionné par rapport au footer */
 }
@@ -240,7 +212,7 @@ th, td {
 .footer__tweet, .footer__my-friends, .footer__my-photos {
     flex: 1; /* Chaque bloc prendra un tiers de l'espace disponible */
     margin: 10px;
-    /*min-width: 250px; /* Fixer une largeur minimale pour éviter que les blocs soient trop petits */
+    /*min-width: 250px; /* Fixe une largeur minimale pour éviter que les blocs soient trop petits */
 }
 
 .footer__tweet-heading {
@@ -403,7 +375,7 @@ section {
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-default);
     /* width: 350px; */
-    /*margin: 5px 0; /* Ajustez selon vos besoins */
+    /*margin: 5px 0;*/
     height: 100%;
 }
 
@@ -444,7 +416,7 @@ section {
 }
 
 .main__aside-author-text {
-    margin: 20px 0; /* Ajustez les valeurs selon vos préférences */
+    margin: 20px 0;
 }
 
 .main__aside-author-main-headline {
@@ -452,18 +424,15 @@ section {
 }
 
 .main__aside-author-headline {
-    margin: 20px 0; /* Vous pouvez réduire ou augmenter la valeur */
+    margin: 20px 0;
 }
 
-
-/* Réduit la marge inférieure du dernier paragraphe */
-.main__author-text:last-of-type {
-    margin-bottom: 10px; /* Ajustez la valeur selon vos besoins */
+.main__aside-author-text:last-of-type {
+    margin-bottom: 10px;
 }
 
-/* Ou, vous pouvez également ajuster la marge supérieure du conteneur social */
-.main__author-social {
-    margin-top: 20px; /* Ajustez la valeur selon vos besoins */
+.main__aside-author-social {
+    margin-top: 20px;
 }
 
 /* Block: menu-scroll */
@@ -625,27 +594,6 @@ input[type="submit"] {
     transform: scale(1.1);
 }
 
-/* Block: photo-lulu */
-.photo-lulu {
-    text-align: center;
-    margin-top: -40px;
-    border: 1px solid var(--quaternary-color);
-    border-radius: 5px;
-}
-
-.my-photos__image {
-    max-width: 48%;
-    height: auto;
-    border-radius: 10px;
-    margin: 2px;
-}
-
-.bubble-arrow {
-    position: relative;
-    top: 40px;
-    right: 144px;
-}
-
 .content__underline {
     font-family: var(--font-family-primary-extra-bold);
     font-size: var(--font-size-large);
@@ -763,19 +711,19 @@ input[type="submit"] {
 }
 
 @media all and (max-width: 1024px) {
-    .bubble-arrow {
+    .main__aside-author-arrow {
         /*display: none;*/
         margin: 10px;
     }
 
-    .main__author-photo {
+    .main__aside-author-photo {
         width: 110px;
         /*float: right;*/
         /*margin-left: 15px;*/
         margin: 5px;
     }
 
-    .main__author-social {
+    .main__aside-author-social {
         margin-top: 10px;
     }
 
@@ -803,7 +751,7 @@ input[type="submit"] {
 @media screen and (max-width: 1024px) {
     .footer {
         flex-direction: column; /* Empile les blocs verticalement */
-        /*align-items: flex-start; /* Aligner les blocs au début du conteneur */
+        /*align-items: flex-start; /* Aligne les blocs au début du conteneur */
     }
 
     .footer__tweet {
@@ -822,8 +770,8 @@ input[type="submit"] {
     }
 
     .footer__scroll-up {
-        /*align-self: flex-end; /* Aligner le bloc de retour en haut à la fin du conteneur */
-        /*margin-top: 20px; /* Ajouter un espace au-dessus pour le séparer des autres blocs */
-        margin-bottom: 47px; /* Ajouter un espace en dessous pour plus d'espacement */
+        /*align-self: flex-end; /* Aligne le bloc de retour en haut à la fin du conteneur */
+        /*margin-top: 20px; /* Ajoute un espace au-dessus pour le séparer des autres blocs */
+        margin-bottom: 47px; /* Ajoute un espace en dessous pour plus d'espacement */
     }
 }

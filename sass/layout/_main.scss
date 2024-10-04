@@ -1,29 +1,29 @@
-// sass/base/_main.scss
+// sass/layout/_main.scss
 .main {
     display: flex;
     justify-content: space-between;
     /*flex-direction: row;*/
-}
 
-.main__section {
-    flex: 3;
-    margin-right: 20px;
-}
+    &__section {
+        flex: 3;
+        margin-right: 20px;
+    }
 
-.main__author {
-    margin-top: 120px;
-    display: flex;
-    background-color: #706b64;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 5px;
-    padding: 10px;
-    color: var(--text-color-light);
-    flex-direction: column;
-    align-items: center;
-    /*justify-content: space-between;*/
-    font-family: var(--font-family-secondary);
-    font-size: var(--font-size-default);
-    /* width: 350px; */
-    /*margin: 5px 0; /* Ajustez selon vos besoins */
-    height: 100%;
+    &__author {
+        margin-top: 120px;
+        display: flex;
+        background-color: #706b64;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 5px;
+        padding: 10px;
+        color: var(--text-color-light);
+        flex-direction: column;
+        align-items: center;
+        /*justify-content: space-between;*/
+        font-family: var(--font-family-secondary);
+        font-size: var(--font-size-default);
+        /* width: 350px;*/
+        /*margin: 5px 0;*/
+        height: 100%;
+    }
 }

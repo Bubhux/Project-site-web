@@ -1,0 +1,19 @@
+// sass/components/_button.scss
+.button--red {
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    background: url('../static/img/red_gradient_background.png') repeat-x;
+    border: 1px solid #760001;
+    border-radius: 5px;
+    font-size: var(--font-size-large);
+    text-align: center;
+    padding: 3px 8px 0;
+    color: white;
+    text-decoration: none;
+
+    img {
+        border: 0;
+    }
+}
