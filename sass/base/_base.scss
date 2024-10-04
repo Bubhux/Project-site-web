@@ -3,23 +3,25 @@ body {
     background: var(--background-body);
     font-family: var(--font-family-primary);
     color: var(--text-color);
-}
+    
+    fieldset {
+        border: 1px solid var(--tertiary-color);
+        padding: 10px;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px 0 rgba(227, 228, 237, 0.37);
+    }
 
-fieldset {
-    border: 1px solid var(--tertiary-color);
-    padding: 10px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px 0 rgba(227, 228, 237, 0.37);
-}
+    table {
+        th, td {
+            font-size: var(--font-size-default);
+            padding: 8px;
+            font-weight: bold;
+        }
+    }
 
-th, td {
-    font-size: var(--font-size-default);
-    padding: 8px;
-    font-weight: bold;
-}
-
-section {
-    /*display: flex;*/
-    margin-bottom: 20px;
+    section {
+        /*display: flex;*/
+        margin-bottom: 20px;
+    }
 }

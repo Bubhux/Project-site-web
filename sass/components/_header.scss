@@ -1,0 +1,27 @@
+// sass/compoments/_header.scss
+.header {
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--quaternary-color);
+        text-shadow: 2px 2px 2px #000000;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    &__logo-title {
+        font-family: var(--font-family-primary-extra-bold);
+        font-size: var(--font-size-extra-large);
+    }
+
+    &__subtitle {
+        font-family: var(--font-family-primary-extra-bold);
+        font-size: var(--font-size-large);
+        white-space: nowrap; // Empêche le passage à la ligne
+    }
+}

@@ -1,1 +1,24 @@
 // sass/main.scss
+@import 'base/_base.scss';
+@import 'base/_fonts.scss';
+@import 'base/_variables.scss';
+
+@import 'components/_aside.scss';
+@import 'components/_banner.scss';
+@import 'components/_button.scss';
+@import 'components/_content.scss';
+@import 'components/_footer.scss';
+@import 'components/_form.scss';
+@import 'components/_header.scss';
+@import 'components/_main.scss';
+@import 'components/_menu-scroll.scss';
+@import 'components/_table.scss';
+
+@import 'layout/_aside.scss';
+@import 'layout/_banner.scss';
+@import 'layout/_footer.scss';
+@import 'layout/_header.scss';
+@import 'layout/_main.scss';
+@import 'layout/_menu-scroll.scss';
+@import 'layout/_nav.scss';
+@import 'layout/_page.scss';

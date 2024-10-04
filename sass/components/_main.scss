@@ -1,0 +1,30 @@
+// sass/components/_main.scss
+.main__roles-list {
+    margin-top: 20px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        li {
+            width: 100%;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                width: 70%;
+                padding: 5px;
+                text-align: center;
+                text-decoration: none;
+                color: #0b0c0d;
+
+                &:hover {
+                    background-color: var(--quaternary-color);
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
