@@ -1,4 +1,8 @@
 // sass/components/_table.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
 .main__role-table {
     width: 100%;
     border-collapse: collapse;
@@ -8,6 +12,7 @@
         font-weight: bold;
         margin-bottom: 10px;
         text-align: left;
+        text-shadow: 2px 2px 2px #76787b;
     }
 
     &-row {

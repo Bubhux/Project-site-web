@@ -1,9 +1,14 @@
 // sass/components/_footer.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
 .footer {
     &__tweet-heading {
         font-family: var(--font-family-secondary);
         font-size: var(--font-size-extra-large);
-        text-shadow: 2px 2px 2px #76787b;
+
+        @include text-shadow(2px, 2px, 2px, #76787b);
     }
 
     &__tweet {
@@ -28,7 +33,8 @@
     &__my-friends-heading {
         font-family: var(--font-family-secondary);
         font-size: var(--font-size-extra-large);
-        text-shadow: 2px 2px 2px #969696;
+
+        @include text-shadow(2px, 2px, 2px, #969696);
     }
 
     &__friends-list {
@@ -72,14 +78,15 @@
     }
 
     &__my-photos-img {
-        transition: transform 0.3s ease; // Ajoute une transition fluide
         border-radius: 10px;
         margin: 2px;
         max-width: 100px; // Ajuste la taille maximale des images si nécessaire
         height: auto; // Garde le ratio d'aspect des images
 
+        @include transition-settings(opacity, 0.3s, ease);
+
         &:hover {
-            transform: scale(1.1); // Grossit l'image de 10% lors du survol
+            @include scale(1.1); // Grossit l'image de 10% lors du survol
         }
     }
 

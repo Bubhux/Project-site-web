@@ -1,4 +1,15 @@
 // sass/components/_main.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
+.main__roles {
+    &-intro,
+    &-items {
+        @include text-shadow(2px, 2px, 2px, #3a3e42);
+    }
+}
+
 .main__roles-list {
     margin-top: 20px;
 
@@ -27,4 +38,19 @@
             }
         }
     }
+}
+
+.map {
+    &__description {
+        @include text-shadow(2px, 2px, 2px, #3a3e42);
+    }
+}
+
+.role-detail,
+.role-resume {
+    @include text-shadow(2px, 2px, 2px, #3a3e42);
+}
+
+.main__section-content-headline {
+    @include text-shadow(2px, 2px, 2px, #76787b);
 }

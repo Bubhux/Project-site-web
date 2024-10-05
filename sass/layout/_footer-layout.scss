@@ -1,11 +1,19 @@
-// sass/layout/_footer.scss
+// sass/layout/_footer-layout.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
 .footer {
+    /* border: 1px solid var(--quaternary-color); */
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 20px;
-    background: var(--header-background);
+    background: var(--footer-background);
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    position: relative;
     border-radius: 10px;
+
+    @include spacing(30px, 20px);
 
     &__tweet, 
     &__my-friends, 

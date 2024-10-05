@@ -1,0 +1,16 @@
+// sass/components/_nav.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
+.nav__link {
+    text-decoration: none;
+
+    @include spacing(0, 3px);
+    @include font-settings(var(--font-family-secondary-black), var(--font-size-extra-large), normal, var(--text-color));
+
+    &:hover {
+        color: var(--text-color-light);
+        border-bottom: 2px solid var(--text-color-light);
+    }
+}

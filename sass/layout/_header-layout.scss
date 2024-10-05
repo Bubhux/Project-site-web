@@ -1,9 +1,13 @@
-// sass/layout/_header.scss
+// sass/layout/_header-layout.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 20px;
     background: var(--header-background);
-    border-radius: 10px;
+
+    @include spacing(17px);
 }

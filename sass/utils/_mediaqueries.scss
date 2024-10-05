@@ -1,4 +1,7 @@
 // sass/utils/_mediaqueries.scss
+@import '../base/_variables.css';
+
+
 // Media queries pour les écrans jusqu'à 1024px
 @media all and (max-width: 1024px) {
 
@@ -94,11 +97,11 @@
     .menu-scroll {
         margin-left: 100px;
         margin-bottom: 10px;
-        padding: 0 5px 15px;
-        width: 98%;
+        padding: 0 5px 25px;
+        width: 97%;
         height: 60px;
         background: var(--background-body);
-        opacity: 0.4;
+        opacity: 0.8;
         background-size: cover;
         text-align: right;
         border-radius: 5px;
@@ -106,7 +109,7 @@
 
     .menu-scroll__link {
         list-style-type: none;
-        color: var(--text-color-light);
+        color: var(--text-color);
         text-decoration: none;
         font-size: var(--font-size-default);
         
@@ -142,7 +145,7 @@
         }
 
         &__scroll-up {
-            margin-bottom: 47px; // Ajoute un espace en dessous pour plus d'espacement
+            margin-bottom: 39px; // Ajoute un espace en dessous pour plus d'espacement
         }
     }
 }

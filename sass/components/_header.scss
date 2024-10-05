@@ -1,11 +1,16 @@
 // sass/compoments/_header.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
 .header {
     &__title {
         display: flex;
         align-items: center;
         justify-content: space-between;
         color: var(--quaternary-color);
-        text-shadow: 2px 2px 2px #000000;
+
+        @include text-shadow(2px, 2px, 2px, #000000);
     }
 
     &__logo {

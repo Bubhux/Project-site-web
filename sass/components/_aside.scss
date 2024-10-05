@@ -1,9 +1,13 @@
 // sass/components/_aside.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
 .main__aside-author {
     &-arrow {
         position: relative;
         top: 30px;
-        right: 135px;
+        right: 125px;
     }
 
     &-photo {
@@ -37,6 +41,7 @@
 
     &-text {
         margin: 20px 0;
+        @include text-shadow(2px, 2px, 2px, #000000);
 
         &:last-of-type {
             margin-bottom: 10px;
@@ -45,10 +50,12 @@
 
     &-main-headline {
         margin-bottom: 5px;
+        @include text-shadow(2px, 2px, 2px, #000000);
     }
 
     &-headline {
         margin: 20px 0;
+        @include text-shadow(2px, 2px, 2px, #000000);
     }
 
     &-social {
