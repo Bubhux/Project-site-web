@@ -1,4 +1,7 @@
 // sass/base/_base.scss
+@import '../base/variables';
+
+
 body {
     background: var(--background-body);
     font-family: var(--font-family-primary);
@@ -10,6 +13,13 @@ body {
         margin: 20px 0;
         border-radius: 10px;
         box-shadow: 1px 1px 5px 0 rgba(227, 228, 237, 0.37);
+    }
+
+    legend {
+        h2,
+        h3 {
+            text-shadow: 2px 2px 2px #76787b; 
+        }
     }
 
     table {
@@ -24,4 +34,9 @@ body {
         /*display: flex;*/
         margin-bottom: 20px;
     }
+}
+
+.page {
+    width: 900px;
+    margin: auto;
 }

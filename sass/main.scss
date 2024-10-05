@@ -12,13 +12,16 @@
 @import 'components/_header.scss';
 @import 'components/_main.scss';
 @import 'components/_menu-scroll.scss';
+@import 'components/_nav.scss';
 @import 'components/_table.scss';
 
-@import 'layout/_aside.scss';
-@import 'layout/_banner.scss';
-@import 'layout/_footer.scss';
-@import 'layout/_header.scss';
-@import 'layout/_main.scss';
-@import 'layout/_menu-scroll.scss';
-@import 'layout/_nav.scss';
-@import 'layout/_page.scss';
+@import 'layout/_aside-layout.scss';
+@import 'layout/_banner-layout.scss';
+@import 'layout/_footer-layout.scss';
+@import 'layout/_header-layout.scss';
+@import 'layout/_main-layout.scss';
+@import 'layout/_menu-scroll-layout.scss';
+@import 'layout/_nav-layout.scss';
+
+@import 'utils/_mediaqueries.scss';
+@import 'utils/_mixins.scss';

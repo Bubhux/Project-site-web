@@ -1,4 +1,8 @@
 // sass/components/_content.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
 .content {
     &__underline {
         font-family: var(--font-family-primary-extra-bold);

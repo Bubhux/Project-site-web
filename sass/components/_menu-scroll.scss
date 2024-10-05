@@ -1,16 +1,38 @@
 // sass/components/_menu-scroll.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
+.menu-scroll__list {
+    list-style-type: none;
+}
+
+.menu-scroll__link {
+    list-style-type: none;
+    text-decoration: none;
+
+    @include font-settings(var(--font-family-default), var(--font-size-default), normal, var(--text-color-light));
+
+    &:hover {
+        font-size: var(--font-size-large);
+    }
+}
+
 .footer__scroll-up {
     position: absolute;
-    bottom: 89%;
+    bottom: 90%;
     right: 50%;
     opacity: 0.5;
-    transition: opacity 0.3s ease;
-}
 
-.footer__scroll-up:hover {
-    opacity: 1;
-}
+    @include transition-settings(opacity, 0.3s, ease);
 
-.footer__scroll-up img {
-    max-width: 40px;
+    &:hover {
+        opacity: 1;
+
+        @include scale(1.2);
+    }
+
+    img {
+        max-width: 40px;
+    }
 }
