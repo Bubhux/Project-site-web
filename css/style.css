@@ -43,12 +43,6 @@
   --font-family-primary-extra-bold: "Manrope", sans-serif;
   --font-family-secondary: "Outfit", sans-serif;
   --font-family-secondary-black: "Outfit", sans-serif;
-  --border-radius-small: 4px;
-  --border-radius-large: 10px;
-  --box-shadow-light: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  --spacing-small: 5px;
-  --spacing-medium: 10px;
-  --spacing-large: 20px;
 }
 
 body {
@@ -78,7 +72,7 @@ body section {
 }
 
 .page {
-  width: 900px;
+  width: 910px;
   margin: auto;
 }
 
@@ -131,18 +125,12 @@ body section {
   --font-family-primary-extra-bold: "Manrope", sans-serif;
   --font-family-secondary: "Outfit", sans-serif;
   --font-family-secondary-black: "Outfit", sans-serif;
-  --border-radius-small: 4px;
-  --border-radius-large: 10px;
-  --box-shadow-light: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  --spacing-small: 5px;
-  --spacing-medium: 10px;
-  --spacing-large: 20px;
 }
 
 .main__aside-author-arrow {
   position: relative;
-  top: 30px;
-  right: 125px;
+  top: 70px;
+  right: 140px;
 }
 .main__aside-author-photo {
   text-align: center;
@@ -162,11 +150,11 @@ body section {
   max-width: 50%;
   height: auto;
   border-radius: 10px;
-  margin: 1px;
+  margin: 2px;
   transition: transform 0.3s ease;
 }
 .main__aside-author-social-icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 .main__aside-author-text {
   margin: 20px 0;
@@ -536,8 +524,8 @@ body section {
   max-width: 1200px;
   position: relative;
   border-radius: 10px;
-  margin: 30px;
-  padding: 20px;
+  margin: 0px;
+  padding: 0px;
 }
 .footer__tweet, .footer__my-friends, .footer__my-photos {
   flex: 1;
@@ -557,7 +545,7 @@ body section {
   justify-content: space-between;
   align-items: flex-end;
   background: var(--header-background);
-  margin: 17px;
+  margin: 0px;
   padding: 10px;
 }
 
