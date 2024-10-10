@@ -44,6 +44,11 @@
     &__description {
         @include text-shadow(2px, 2px, 2px, #3a3e42);
     }
+
+    &__image {
+        border-radius: 5px;
+        transition: border-radius 0.3s ease-in-out;
+    }
 }
 
 .role-detail,

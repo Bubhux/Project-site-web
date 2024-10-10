@@ -405,6 +405,10 @@ body section {
 .map__description {
   text-shadow: 2px 2px 2px #3a3e42;
 }
+.map__image {
+  border-radius: 5px;
+  transition: border-radius 0.3s ease-in-out;
+}
 
 .role-detail,
 .role-resume {
@@ -525,7 +529,7 @@ body section {
   position: relative;
   border-radius: 10px;
   margin: 0px;
-  padding: 0px;
+  padding: 30px;
 }
 .footer__tweet, .footer__my-friends, .footer__my-photos {
   flex: 1;
@@ -709,6 +713,7 @@ body section {
 @media screen and (max-width: 1024px) {
   .footer {
     flex-direction: column;
+    padding-top: 40px;
   }
   .footer__tweet {
     order: 1;
@@ -723,8 +728,39 @@ body section {
     margin: -10px 0;
   }
   .footer__scroll-up {
-    margin-bottom: 39px;
+    margin-bottom: 45px;
   }
+}
+body:not(.loaded) [class*=reveal-] {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: none;
+}
+
+body.loaded [class*=reveal-] {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);
+}
+body.loaded .reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);
+}
+body.loaded .reveal-1 {
+  transition-delay: 0.1s;
+}
+body.loaded .reveal-2 {
+  transition-delay: 0.2s;
+}
+body.loaded .reveal-3 {
+  transition-delay: 0.3s;
+}
+body.loaded .reveal-4 {
+  transition-delay: 0.4s;
+}
+body.loaded .reveal-5 {
+  transition-delay: 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */
