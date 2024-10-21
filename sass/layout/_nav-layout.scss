@@ -1,0 +1,17 @@
+// sass/layout/_nav-layout.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
+.nav {
+    ul {
+        list-style-type: none;
+        display: flex;
+
+        @include text-shadow(2px, 2px, 2px, #9f9f9f);
+    }
+
+    .nav__item {
+        margin-right: 10px;
+    }
+}

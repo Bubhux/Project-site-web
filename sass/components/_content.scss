@@ -1,0 +1,24 @@
+// sass/components/_content.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
+.content {
+    &__underline {
+        font-family: var(--font-family-primary-extra-bold);
+        font-size: var(--font-size-large);
+        text-shadow: 2px 2px 2px #3a3e42;
+    }
+
+    &__link {
+        color: var(--quaternary-color);
+        font-size: var(--font-size-default);
+        margin-left: 2px;
+
+        &:hover {
+            color: var(--text-color-light);
+            font-size: var(--font-size-large);
+            margin-left: 2px;
+        }
+    }
+}

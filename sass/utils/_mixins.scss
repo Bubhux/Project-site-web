@@ -1,0 +1,40 @@
+// sass/utils/_mixins.scss
+// Mixin pour les polices
+@mixin font-settings($font-family, $font-size, $font-weight: normal, $color: var(--text-color)) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+}
+
+// Mixin pour les bordures
+@mixin border-settings($border-color, $border-width: 1px, $border-radius: 4px) {
+    border: $border-width solid $border-color;
+    border-radius: $border-radius;
+}
+
+// Mixin pour les ombres
+@mixin box-shadow-settings($box-shadow: var(--box-shadow-light)) {
+    box-shadow: $box-shadow;
+}
+
+// Mixin pour les transitions
+@mixin transition-settings($property: all, $duration: 0.3s, $timing-function: ease) {
+    transition: $property $duration $timing-function;
+}
+
+// Mixin pour les transformation
+@mixin scale($scale-value: 1.1) {
+    transform: scale($scale-value);
+}
+
+// Mixin pour les espaces
+@mixin spacing($margin: 10px, $padding: 10px) {
+    margin: $margin;
+    padding: $padding;
+}
+
+// Mixin pour les ombres des textes
+@mixin text-shadow($x, $y, $blur, $color) {
+    text-shadow: $x $y $blur $color;
+}

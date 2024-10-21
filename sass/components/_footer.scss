@@ -1,0 +1,111 @@
+// sass/components/_footer.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
+.footer {
+    &__tweet-heading {
+        font-family: var(--font-family-secondary);
+        font-size: var(--font-size-extra-large);
+
+        @include text-shadow(2px, 2px, 2px, #76787b);
+    }
+
+    &__tweet {
+        p {
+            font-family: var(--font-family-secondary-black);
+            font-size: var(--font-size-default);
+        }
+
+        &-email {
+            font-family: var(--font-family-secondary);
+            font-size: var(--font-size-large);
+            color: var(--quaternary-color);
+            text-decoration: none;
+
+            &:hover {
+                font-size: var(--font-size-extra-large);
+                color: var(--text-color-light);
+            }
+        }
+    }
+
+    &__my-friends-heading {
+        font-family: var(--font-family-secondary);
+        font-size: var(--font-size-extra-large);
+
+        @include text-shadow(2px, 2px, 2px, #969696);
+    }
+
+    &__friends-list {
+        font-family: var(--font-family-secondary-black);
+        font-size: var(--font-size-default);
+        color: var(--text-color);
+        justify-content: space-between;
+        list-style: none;
+        padding-right: 10px;
+        margin: 0;
+
+        &-item {
+            white-space: nowrap;
+        }
+
+        &-link {
+            font-size: var(--font-size-default);
+            font-family: var(--font-family-secondary);
+            color: var(--text-color);
+            text-decoration: none;
+
+            &:hover {
+                font-size: var(--font-size-large);
+                color: var(--text-color-light);
+            }
+        }
+    }
+
+    &__my-photos-heading {
+        font-family: var(--font-family-secondary);
+        font-size: var(--font-size-extra-large);
+        white-space: nowrap; // Empêche le texte de se casser en plusieurs lignes
+        text-shadow: 2px 2px 2px #b4b4b4;
+    }
+
+    &__my-photos-gallery {
+        display: flex;
+        flex-wrap: nowrap; // Empêche les images de se répartir sur plusieurs lignes
+        gap: 2px; // Ajoute un espace entre les images
+        justify-content: center;
+    }
+
+    &__my-photos-img {
+        border-radius: 10px;
+        margin: 2px;
+        max-width: 100px; // Ajuste la taille maximale des images si nécessaire
+        height: auto; // Garde le ratio d'aspect des images
+
+        @include transition-settings(opacity, 0.3s, ease);
+
+        &:hover {
+            @include scale(1.1); // Grossit l'image de 10% lors du survol
+        }
+    }
+
+    &__subtitle {
+        font-size: var(--font-size-large);
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: var(--font-size-default);
+        margin-bottom: 10px;
+    }
+
+    &__my-photos-link {
+        text-decoration: none; // Enlève le soulignement par défaut
+        color: transparent; // Cache la couleur du texte, mais les images restent visibles
+
+        &:hover {
+            color: inherit; // Assure qu'aucun effet n'apparaisse au survol
+        }
+    }
+}

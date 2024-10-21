@@ -1,0 +1,32 @@
+// sass/base/_variables.scss
+:root {
+    --background-body: linear-gradient(90deg, rgba(26,29,41,1) 0%, rgba(61,63,74,1) 25%, rgba(125,132,145,1) 75%, rgba(177,178,181,1) 100%);
+    --primary-color: #1A1D29;
+    --secondary-color: #3D3F4A;
+    --tertiary-color: #7D8491;
+    --quaternary-color: #B1B2B5;
+
+    --border-color-light: #ccc;
+    --border-color-dark: #181818;
+    --highlight-color: #f1f1f1;
+    --hover-color: #9c9c9c;
+    --link-hover-color: rgb(18, 208, 135);
+    --link-color: #b6178e;
+
+    --text-color: #0b0c0d;
+    --text-color-light: #fff;
+
+    --footer-background: url('../static/img/blue_separator.png') repeat-x top;
+    --header-background: url('../static/img/blue_separator.png') repeat-x bottom;
+
+    --font-size-small: 0.8em;
+    --font-size-default: 0.9em;
+    --font-size-large: 1.2em;
+    --font-size-extra-large: 1.3em;
+    --font-size-subtitle: 1.0em;
+
+    --font-family-primary: 'Manrope', sans-serif;
+    --font-family-primary-extra-bold: 'Manrope', sans-serif;
+    --font-family-secondary: 'Outfit', sans-serif;
+    --font-family-secondary-black: 'Outfit', sans-serif;
+}

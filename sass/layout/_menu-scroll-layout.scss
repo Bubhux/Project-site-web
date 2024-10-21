@@ -1,0 +1,23 @@
+// sass/layout/_menu-scroll-layout.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
+.menu-scroll {
+    position: fixed;
+    background: var(--background-body);
+    background-size: cover;
+    text-align: right;
+    right: 5px;
+    bottom: 10px;
+    width: 155px;
+    display: inline-block;
+    vertical-align: top;
+
+    opacity: 0.5;
+
+    @include spacing(0 5px, 0 10px);
+    @include border-settings(var(--quaternary-color), 1px, 5px);
+    @include box-shadow-settings(rgba(0, 0, 0, 0.35) 0px 5px 15px);
+    @include font-settings(var(--font-family-default), var(--font-size-default));
+}

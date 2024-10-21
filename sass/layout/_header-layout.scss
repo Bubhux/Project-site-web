@@ -1,0 +1,13 @@
+// sass/layout/_header-layout.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: var(--header-background);
+
+    @include spacing(0px);
+}

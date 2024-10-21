@@ -1,0 +1,64 @@
+// sass/components/_aside.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
+.main__aside-author {
+    &-arrow {
+        position: relative;
+        top: 70px;
+        right: 140px;
+    }
+
+    &-photo {
+        text-align: center;
+        border: 1px solid #181818;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+        margin-top: 5px;
+
+        img {
+            margin-right: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &-social-icon {
+        max-width: 50%;
+        height: auto;
+        border-radius: 10px;
+        margin: 2px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            @include scale(1.2);
+        }
+    }
+
+    &-text {
+        margin: 20px 0;
+        @include text-shadow(2px, 2px, 2px, #000000);
+
+        &:last-of-type {
+            margin-bottom: 10px;
+        }
+    }
+
+    &-main-headline {
+        margin-bottom: 5px;
+        @include text-shadow(2px, 2px, 2px, #000000);
+    }
+
+    &-headline {
+        margin: 20px 0;
+        @include text-shadow(2px, 2px, 2px, #000000);
+    }
+
+    &-social {
+        margin-top: 20px;
+    }
+}

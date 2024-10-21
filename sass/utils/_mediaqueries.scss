@@ -1,0 +1,152 @@
+// sass/utils/_mediaqueries.scss
+@import '../base/_variables.css';
+
+
+// Media queries pour les écrans jusqu'à 1024px
+@media all and (max-width: 1024px) {
+
+    .page {
+        width: auto;
+    }
+
+    .banner {
+        display: none;
+    }
+
+    main {
+        flex-direction: column;
+
+        section {
+            margin-right: 0;
+        }
+
+        aside {
+            margin-top: 20px; // Espace entre section et aside
+        }
+    }
+
+    .nav__link {
+        font-size: var(--font-size-large);
+        font-family: var(--font-family-secondary-black);
+        color: var(--text-color);
+        text-decoration: none;
+
+        &:hover {
+            font-size: var(--font-size-extra-large);
+            color: var(--text-color-light);
+            text-decoration: none;
+            border-bottom: none;
+        }
+    }
+
+    nav {
+        text-align: left;
+
+        ul {
+            flex-direction: column;
+        }
+
+        li {
+            padding-left: 4px;
+        }
+
+        a {
+            font-size: 1.1em;
+
+            &:hover {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    .main__aside-author-arrow {
+        margin: 10px;
+    }
+
+    .main__aside-author-photo {
+        width: 110px;
+        margin: 5px;
+    }
+
+    .main__aside-author-social {
+        margin-top: 10px;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    article,
+    aside {
+        width: auto;
+        margin-bottom: 15px;
+    }
+
+    aside p:last-child {
+        text-align: center;
+    }
+
+    footer {
+        background: none;
+    }
+}
+
+// Media queries pour les écrans jusqu'à 1280px
+@media all and (max-width: 1280px) {
+
+    .menu-scroll {
+        margin-left: 100px;
+        margin-bottom: 10px;
+        padding: 0 5px 25px;
+        width: 97%;
+        height: 60px;
+        background: var(--background-body);
+        opacity: 0.8;
+        background-size: cover;
+        text-align: right;
+        border-radius: 5px;
+    }
+
+    .menu-scroll__link {
+        list-style-type: none;
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: var(--font-size-default);
+        
+        ul {
+            font-size: var(--font-size-default);
+        }
+    }
+
+    .menu-scroll__link ul a:hover {
+        text-decoration: underline;
+    }
+}
+
+// Media queries spécifiques à l'affichage d'écran
+@media screen and (max-width: 1024px) {
+
+    .footer {
+        flex-direction: column; // Empile les blocs verticalement
+        padding-top: 40px;
+
+        &__tweet {
+            order: 1; // Positionne le bloc des tweets en premier
+            margin: -10px 0;
+        }
+
+        &__my-friends {
+            order: 2; // Positionne le bloc des amis en deuxième
+            margin: -10px 0;
+        }
+
+        &__my-photos {
+            order: 3; // Positionne le bloc des photos en dernier
+            margin: -10px 0;
+        }
+
+        &__scroll-up {
+            margin-bottom: 45px; // Ajoute un espace en dessous pour plus d'espacement
+        }
+    }
+}

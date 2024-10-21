@@ -1,0 +1,20 @@
+// sass/components/_banner.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
+.banner__description {
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 5px 5px;
+    width: 99.5%;
+    height: 33px;
+    padding: 15px 0 0 4px;
+    background-color: rgba(24, 24, 24, 0.6);
+    color: var(--quaternary-color);
+    font-size: var(--font-size-small);
+
+    p {
+        margin: 2px 10px;
+    }
+}

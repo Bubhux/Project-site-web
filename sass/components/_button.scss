@@ -1,0 +1,36 @@
+// sass/components/_button.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
+.button--red {
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: url('../static/img/red_gradient_background.png') repeat-x;
+    border: 1px solid #760001;
+    border-radius: 5px;
+    font-size: var(--font-size-large);
+    text-align: center;
+    padding: 3px 8px 0;
+    color: white;
+    text-decoration: none;
+    display: flex; // Ajout de flex pour centrer le contenu
+    align-items: center; // Centre verticalement
+    justify-content: center; // Centre horizontalement
+    padding: 3px 8px; // Ajuste le padding pour centrer verticalement
+
+    @include transition-settings(opacity, 0.3s, ease);
+
+    img {
+        border: 0;
+        margin-left: 5px;
+    }
+
+    &:hover {
+        opacity: 1;
+
+        @include scale(1.1);
+    }
+}

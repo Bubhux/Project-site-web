@@ -1,0 +1,33 @@
+// sass/layout/_footer-layout.scss
+@import '../base/_variables.css';
+@import '../utils/_mixins.scss';
+
+
+.footer {
+    /* border: 1px solid var(--quaternary-color); */
+    display: flex;
+    background: var(--footer-background);
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    position: relative;
+    border-radius: 10px;
+
+    @include spacing(0px, 30px);
+
+    &__tweet, 
+    &__my-friends, 
+    &__my-photos {
+        flex: 1; // Chaque bloc prendra un tiers de l'espace disponible
+        margin: 10px;
+        //min-width: 250px; // Fixe une largeur minimale pour éviter que les blocs soient trop petits
+    }
+}
+
+.footer__tweet-text, 
+.footer__tweet-info, 
+.footer__tweet-contact {
+    white-space: nowrap; /* Empêche le texte de se casser en plusieurs lignes */
+    overflow: hidden; /* Cache tout texte qui dépasse la largeur du conteneur */
+    text-overflow: ellipsis; /* Ajoute des points de suspension (...) si le texte est trop long */
+}
