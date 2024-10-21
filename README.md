@@ -74,7 +74,7 @@
 ### Accéder à la démonstration en ligne   
 
 - Vous pouvez accéder à une démonstration de la page web via **GitHub Pages**.   
-- En utilisant le lien suivant ➔ [Lien de la page web du projet](https://bubhux.github.io/Projet-Site-Web/)   
+- En utilisant le lien suivant ➔ [Lien de la page web du projet](https://bubhux.github.io/Projet-Web-HTML-CSS/)   
 
 --------------------------------------------------------------------------------------------------------------------------------
 
